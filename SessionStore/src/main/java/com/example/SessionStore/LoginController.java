@@ -11,19 +11,22 @@ import java.util.HashMap;
 public class LoginController {
 
     // DB 대신하는 역할
-    HashMap<String, String> sessionMap = new HashMap<>();
+//    HashMap<String, String> sessionMap = new HashMap<>();
 
     // 로그인
     @GetMapping("/login")
     public String login(HttpSession session, @RequestParam String name){
-        sessionMap.put(session.getId(),name);
+//        sessionMap.put(session.getId(),name);
+        session.setAttribute("name",name);
         return "save";
     }
 
     // 세션 저장 되어 있는 것을 확인
     @GetMapping("/myName")
     public String myName(HttpSession session){
-        String myName = sessionMap.get(session.getId());
+//        String myName = sessionMap.get(session.getId());
+        // Object형으로 반환
+        String myName = (String)session.getAttribute("name");
         return myName;
     }
 }
