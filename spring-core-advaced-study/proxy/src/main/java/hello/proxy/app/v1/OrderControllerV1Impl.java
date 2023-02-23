@@ -9,13 +9,13 @@ public class OrderControllerV1Impl implements OrderControllerV1{
     }
 
     @Override
-    public String reqeust(String itemId) {
+    public String request(String itemId) {
         orderService.orderItem(itemId);
         return "ok";
     }
 
     @Override
-    public String noLof() {
+    public String noLog() {
         return "ok";
     }
 }
