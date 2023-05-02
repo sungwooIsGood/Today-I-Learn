@@ -1,0 +1,13 @@
+package hello.aop.order.aop.member.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target(ElementType.METHOD) // method 대상의 aop
+@Retention(RetentionPolicy.RUNTIME)
+public @interface MethodAop {
+
+    String value();
+}
