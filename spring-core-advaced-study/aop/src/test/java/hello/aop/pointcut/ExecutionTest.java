@@ -32,7 +32,7 @@ public class ExecutionTest {
      * execution(접근제어자? 반환타입 선언타입? 메서드이름(파라미터) 예외?)
      * ?는 생략가능 한 것
      * . 는 정확한 위치
-     * ..은 하위 모든 위치
+     * ..은 하위 모든 위
      * public java.lang.String hello.aop.order.aop.member.MemberServiceImpl.hello(java.lang.String)
      */
     @Test
@@ -112,5 +112,61 @@ public class ExecutionTest {
     void packageExactFalse(){
         pointcut.setExpression("execution(* hello.aop.*.*(..))");
         assertThat(pointcut.matches(helloMethod,MemberServiceImpl.class)).isFalse();
+    }
+
+    @Test
+    void typeExactMatch(){
+        pointcut.setExpression("execution(* hello.aop.member.MemberServiceImpl.*(..))");
+        assertThat(pointcut.matches(helloMethod,MemberServiceImpl.class)).isTrue();
+    }
+
+    @Test
+    @DisplayName("impl 대신 인터페이스 적용, 부모타입에다 적용하면 자식은 다 적용 된다.")
+    void typeMatchSuperType(){
+        pointcut.setExpression("execution(* hello.aop.member.MemberService.*(..))");
+        assertThat(pointcut.matches(helloMethod,MemberServiceImpl.class)).isTrue();
+    }
+
+    @Test
+    @DisplayName("부모타입에다 적용하면 자식은 다 적용 되지만, 부모가 가지고있는 메서드만 적용된다.")
+    void typeMatchInternal() throws NoSuchMethodException {
+        pointcut.setExpression("execution(* hello.aop.member.MemberService.*(..))");
+        Method internalMethod = MemberServiceImpl.class.getMethod("internal", String.class);
+        assertThat(pointcut.matches(internalMethod,MemberServiceImpl.class)).isTrue();
+    }
+
+    @DisplayName("String 타입의 파라미터 허용 '*(String)' ")
+    @Test
+    void argsMatch(){
+        pointcut.setExpression("execution(* *(String))");
+        assertThat(pointcut.matches(helloMethod,MemberServiceImpl.class)).isTrue();
+    }
+
+    @DisplayName("파라미터가 없는 경우 '*()' ")
+    @Test
+    void argsMatchNoArgs(){
+        pointcut.setExpression("execution(* *(String))");
+        assertThat(pointcut.matches(helloMethod,MemberServiceImpl.class)).isTrue();
+    }
+
+    @DisplayName("정확한 하나의 파라미터 허용, 모든 타입 허용, 즉, 파라미터 갯수만 같을 경우 '*(*)' ")
+    @Test
+    void argsMatchStar(){
+        pointcut.setExpression("execution(* *(*))");
+        assertThat(pointcut.matches(helloMethod,MemberServiceImpl.class)).isTrue();
+    }
+
+    @DisplayName("모든 케이스를 다 만족, (), (Object x), (Object x, Object y) ... -> '*(*)' ")
+    @Test
+    void argsMatchAll(){
+        pointcut.setExpression("execution(* *(..))");
+        assertThat(pointcut.matches(helloMethod,MemberServiceImpl.class)).isTrue();
+    }
+
+    @DisplayName("String 타입으로 시작 후 모든 타입 허용 (Stirng x), (String x, Object y) ... -> '*(String, ..)' ")
+    @Test
+    void argsMatchComplex(){
+        pointcut.setExpression("execution(* *(String, ..))");
+        assertThat(pointcut.matches(helloMethod,MemberServiceImpl.class)).isTrue();
     }
 }

@@ -20,7 +20,7 @@ public class AdvisorTest {
 
     @Test
     @DisplayName("어드바이저 테스트")
-    void advisorTest1(){
+    void advisorTest1() {
         ServiceImpl target = new ServiceImpl();
         ProxyFactory proxyFactory = new ProxyFactory(target);
 
@@ -41,7 +41,7 @@ public class AdvisorTest {
 
     @Test
     @DisplayName("pointcut 직접구현")
-    void advisorTest2(){
+    void advisorTest2() {
         ServiceImpl target = new ServiceImpl();
         ProxyFactory proxyFactory = new ProxyFactory(target);
 
@@ -62,7 +62,7 @@ public class AdvisorTest {
 
     @Test
     @DisplayName("스프링이 제공하는 pointcut")
-    void advisorTest3(){
+    void advisorTest3() {
         ServiceImpl target = new ServiceImpl();
         ProxyFactory proxyFactory = new ProxyFactory(target);
 
@@ -83,9 +83,8 @@ public class AdvisorTest {
     }
 
 
-
     // pointcut 구현체
-    static class MyPointcut implements Pointcut{
+    static class MyPointcut implements Pointcut {
         @Override
         public ClassFilter getClassFilter() {
             return ClassFilter.TRUE;
@@ -98,7 +97,7 @@ public class AdvisorTest {
     }
 
     // MethodMatcher 구현체 - pointcut에 사용될 method filter를 구현하는 것
-    static class MyMethodMatcher implements MethodMatcher{
+    static class MyMethodMatcher implements MethodMatcher {
 
         private String matchName = "save";
 
@@ -109,8 +108,8 @@ public class AdvisorTest {
         public boolean matches(Method method, Class<?> targetClass) {
 
             boolean result = method.getName().equals(matchName);
-            log.info("포인트컷 호출 method={}, targetClass={}",method.getName(), targetClass);
-            log.info("포인트컷 결과:{}",result);
+            log.info("포인트컷 호출 method={}, targetClass={}", method.getName(), targetClass);
+            log.info("포인트컷 결과:{}", result);
             return result;
         }
 
@@ -123,4 +122,5 @@ public class AdvisorTest {
         public boolean matches(Method method, Class<?> targetClass, Object... args) {
             return false;
         }
+    }
 }
