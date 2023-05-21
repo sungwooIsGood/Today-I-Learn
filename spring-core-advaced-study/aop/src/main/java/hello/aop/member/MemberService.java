@@ -1,4 +1,4 @@
-package hello.aop.order.aop.member;
+package hello.aop.member;
 
 public interface MemberService {
 

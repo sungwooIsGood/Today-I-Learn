@@ -1,8 +1,7 @@
 package hello.aop.pointcut;
 
-import hello.aop.order.aop.member.MemberServiceImpl;
+import hello.aop.member.MemberServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
