@@ -1,8 +1,7 @@
-package hello.aop.exam.aop.internalCall.aop;
+package hello.aop.exam.aop.internalCall;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 @Slf4j
@@ -24,7 +23,7 @@ public class CallServiceV2 {
          * 아래 getObject();를 호출하는 시점에 스프링 컨테이너에서 빈을 조회한다.
          */
         CallServiceV2 callServiceV2 = callServiceV2ObjectProvider.getObject();
-        callServiceV2.internal(); // 내부 메서드 호출(this.internal())
+        callServiceV2.internal();
     }
 
     public void internal(){
