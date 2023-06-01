@@ -13,7 +13,8 @@ import org.springframework.context.annotation.Import;
 // Spring boot는 기본적으로 CGLIB이다. 아래 옵션을 통해 JDK 동적 프록시로 변환 해준다. 물론 인터페이스가 없으면 CGLIB로 동작한다.
 // 또한 아래 properties는 application.properties에서 적는 것과 같다.
 //@SpringBootTest(properties = {"spring.aop.proxy-target-class=false"}) // JDK 동적 프록시
-@SpringBootTest(properties = {"spring.aop.proxy-target-class=true"}) // CGLIB
+//@SpringBootTest(properties = {"spring.aop.proxy-target-class=true"}) // CGLIB, 없어도 적용
+@SpringBootTest
 @Import(ProxyDIAspect.class)
 public class ProxyDITest {
 
