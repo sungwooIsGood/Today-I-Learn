@@ -3,6 +3,7 @@ package com.rabbitmq.producer.service;
 import com.rabbitmq.producer.data.dto.MessageDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
@@ -20,5 +21,10 @@ public class RabbitMqProducerService {
          */
         rabbitTemplate.convertAndSend("hello.exchange","hello.key",message);
         log.info("메세지 큐로 전송이 성공적입니다.");
+    }
+
+    public void sendSignAlarm(MessageDto messageDto) {
+        rabbitTemplate.convertAndSend("hello.sign","hello.sign.keyTest",messageDto);
+        log.info("topic 메세지 큐로 전송이 성공적입니다.");
     }
 }

@@ -44,7 +44,6 @@ public class RabbitmqConfig {
         connectionFactory.setPort(port);
         connectionFactory.setUsername(username);
         connectionFactory.setPassword(password);
-        System.out.println("host: "+host);
         return connectionFactory;
     }
 }

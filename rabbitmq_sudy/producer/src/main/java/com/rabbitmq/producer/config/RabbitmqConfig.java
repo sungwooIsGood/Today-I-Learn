@@ -1,14 +1,12 @@
 package com.rabbitmq.producer.config;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.DirectExchange;
-import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,7 +29,39 @@ public class RabbitmqConfig {
     // queue 이름
     @Bean
     Queue queue() {
-        return new Queue("hello.queue", false);
+        return new Queue("hello.queue",false);
+    }
+
+
+    @Bean
+    Queue signDtwQueue(){
+        return new Queue("hello.sign.dtw");
+    }
+
+    @Bean
+    Queue signSnsQueue(){
+        return new Queue("hello.sign.sns");
+    }
+
+
+    // topic exchange 설정
+    @Bean
+    TopicExchange signTopicExchange(){
+        return new TopicExchange("hello.sign");
+    }
+
+    @Bean
+    Binding signDtwTopicBinding(TopicExchange signTopicExchange,@Qualifier("signDtwQueue") Queue queue) {
+        Binding with = BindingBuilder.bind(queue).to(signTopicExchange).with("hello.sign.#");
+        System.out.println(with);
+        return with;
+    }
+
+    @Bean
+    Binding signSnsTopicBinding(TopicExchange signTopicExchange,@Qualifier("signSnsQueue") Queue queue) {
+        Binding with = BindingBuilder.bind(queue).to(signTopicExchange).with("hello.sign.#");
+        System.out.println(with);
+        return with;
     }
 
     // exchange 이름
