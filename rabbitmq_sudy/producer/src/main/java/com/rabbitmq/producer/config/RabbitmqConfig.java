@@ -38,10 +38,10 @@ public class RabbitmqConfig {
         return new Queue("hello.sign.dtw");
     }
 
-    @Bean
-    Queue signSnsQueue(){
-        return new Queue("hello.sign.sns");
-    }
+//    @Bean
+//    Queue signSnsQueue(){
+//        return new Queue("hello.sign.sns");
+//    }
 
 
     // topic exchange 설정
@@ -57,12 +57,12 @@ public class RabbitmqConfig {
         return with;
     }
 
-    @Bean
-    Binding signSnsTopicBinding(TopicExchange signTopicExchange,@Qualifier("signSnsQueue") Queue queue) {
-        Binding with = BindingBuilder.bind(queue).to(signTopicExchange).with("hello.sign.#");
-        System.out.println(with);
-        return with;
-    }
+//    @Bean
+//    Binding signSnsTopicBinding(TopicExchange signTopicExchange,@Qualifier("signSnsQueue") Queue queue) {
+//        Binding with = BindingBuilder.bind(queue).to(signTopicExchange).with("hello.sign.#");
+//        System.out.println(with);
+//        return with;
+//    }
 
     // exchange 이름
     @Bean
