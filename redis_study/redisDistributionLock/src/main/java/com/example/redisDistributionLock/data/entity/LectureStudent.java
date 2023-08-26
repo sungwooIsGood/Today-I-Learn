@@ -21,4 +21,11 @@ public class LectureStudent {
     private Long lectureStudentId;
     private Long studentId;
     private Long lectureId;
+
+    public static LectureStudent createLectureStudent(Long studentId, Long lectureId){
+        return LectureStudent.builder()
+                .studentId(studentId)
+                .lectureId(lectureId)
+                .build();
+    }
 }
