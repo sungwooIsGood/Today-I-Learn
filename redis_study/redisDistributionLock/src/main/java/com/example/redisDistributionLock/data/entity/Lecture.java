@@ -21,5 +21,12 @@ public class Lecture {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long lectureId;
     private Long limitPeople;
-    private Long SubjectId;
+    private Long subjectId;
+
+    public static Lecture createLecture(Long subjectId, Long limitPeople){
+        return Lecture.builder()
+                .subjectId(subjectId)
+                .limitPeople(limitPeople)
+                .build();
+    }
 }

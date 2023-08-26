@@ -21,4 +21,10 @@ public class Subject {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long subjectId;
     private String name;
+
+    public static Subject createSubject(String name){
+        return Subject.builder()
+                .name(name)
+                .build();
+    }
 }

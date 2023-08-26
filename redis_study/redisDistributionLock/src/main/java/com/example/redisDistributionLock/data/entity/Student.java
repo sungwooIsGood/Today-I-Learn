@@ -22,4 +22,11 @@ public class Student {
     private Long studentId;
     private String name;
 
+    public static Student createStudent(String name){
+        return Student.builder()
+                .name(name)
+                .build();
+    }
+
+
 }

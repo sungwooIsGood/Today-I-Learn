@@ -9,6 +9,7 @@ import com.example.redisDistributionLock.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -21,13 +22,14 @@ public class LectureStudentService {
     private final LectureRepository lectureRepository;
     private final LectureStudentRepository lectureStudentRepository;
 
-    public void saveLectureStudent(Long studentId, Long lectureId,Long limitPeople){
+    @Transactional
+    public Long saveLectureStudent(Long studentId, Long lectureId,Long limitPeople){
 
         // 수강 신청 인원 검증
         isExceedThNumberOfStudent(limitPeople,lectureId);
 
         LectureStudent lectureStudent = LectureStudent.createLectureStudent(studentId, lectureId);
-        lectureStudentRepository.save(lectureStudent);
+        return lectureStudentRepository.save(lectureStudent).getLectureId();
     }
 
     private void isExceedThNumberOfStudent(Long limitPeople,Long lectureId) {
