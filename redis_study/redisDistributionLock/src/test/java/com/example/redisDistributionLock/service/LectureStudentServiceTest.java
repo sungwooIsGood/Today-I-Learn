@@ -30,6 +30,8 @@ class LectureStudentServiceTest {
     private LectureRepository lectureRepository;
     @Autowired
     private StudentRepository studentRepository;
+    @Autowired
+    private LectureStudentLockUtils lectureStudentLockUtils;
 
     @Test
     @DisplayName("수강신청 테스트 동시성 이슈 해결x")
@@ -60,8 +62,47 @@ class LectureStudentServiceTest {
             });
         });
         countDownLatch.await();
+
+        // then
         Assertions.assertThat(lectureStudentList.size()).isEqualTo(11);
     }
+
+
+    @Test
+    @DisplayName("redisson을 사용하여 동시성 해결")
+    void doRedisson() throws InterruptedException {
+
+        // given
+        ExecutorService executorService = Executors.newFixedThreadPool(100); // 스레드 100개 생성
+        CountDownLatch countDownLatch = new CountDownLatch(100);
+
+        Long subjectId = subjectRepository.save(Subject.createSubject("레디스 기초"))
+                .getSubjectId();
+        Long lectureId = lectureRepository.save(Lecture.createLecture(subjectId, 11L))
+                .getLectureId();
+
+        List<Student> studentList = saveManyStudent();
+        List<Long> lectureStudentList = new ArrayList<>();
+
+        // when
+        studentList.forEach(student -> {
+            executorService.submit(() ->{
+                try{
+                    Long lectureStudentId = lectureStudentLockUtils.saveLock(student.getStudentId(), lectureId, 11L);
+                    lectureStudentList.add(lectureStudentId);
+                } finally {
+                    countDownLatch.countDown();
+                }
+            });
+        });
+        countDownLatch.await();
+
+        // then
+        Assertions.assertThat(lectureStudentList.size()).isEqualTo(11);
+
+    }
+
+
 
     private List<Student> saveManyStudent() {
         List<Student> studentsList = new ArrayList<>();
