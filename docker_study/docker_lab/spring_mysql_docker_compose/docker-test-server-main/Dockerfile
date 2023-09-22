@@ -9,7 +9,7 @@ COPY . .
 RUN chmod +x ./gradlew
 RUN ./gradlew clean build
 
-ARG JAR_FILE=build/libs/*.jar
-COPY ${JAR_FILE} app.jar
+ENV JAR_PATH=/app/build/libs
+RUN mv ${JAR_PATH}/*.jar ${JAR_PATH}/app.jar
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=prod", "app.jar"]
