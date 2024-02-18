@@ -1,11 +1,21 @@
 package com.example.productorderservice.order;
 
 import com.example.productorderservice.product.Product;
+import jdk.jfr.Enabled;
+import lombok.NoArgsConstructor;
 import org.springframework.util.Assert;
 
-class Order {
-    private Long id;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "orders")
+@NoArgsConstructor
+class Order {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @OneToOne(fetch = FetchType.LAZY)
     private Product product;
     private int quantity;
 
@@ -20,7 +30,4 @@ class Order {
         return id;
     }
 
-    public void assignId(Long id) {
-        this.id = id;
-    }
 }
