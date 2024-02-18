@@ -6,5 +6,5 @@ interface OrderPort {
 
     Product getProductById(Long productId);
 
-    void save(OrderServiceTest.Order order);
+    void save(Order order);
 }

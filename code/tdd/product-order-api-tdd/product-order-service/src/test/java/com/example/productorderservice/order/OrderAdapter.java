@@ -2,16 +2,16 @@ package com.example.productorderservice.order;
 
 import com.example.productorderservice.product.Product;
 import com.example.productorderservice.product.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 class OrderAdapter implements OrderPort {
 
-    private final ProductRepository productRepository;
-    private final OrderServiceTest.OrderRepository orderRepository;
-
-    public OrderAdapter(ProductRepository productRepository, OrderServiceTest.OrderRepository orderRepository) {
-        this.productRepository = productRepository;
-        this.orderRepository = orderRepository;
-    }
+    @Autowired
+    private ProductRepository productRepository;
+    @Autowired
+    private OrderRepository orderRepository;
 
     @Override
     public Product getProductById(Long productId) {
@@ -20,7 +20,7 @@ class OrderAdapter implements OrderPort {
     }
 
     @Override
-    public void save(OrderServiceTest.Order order) {
+    public void save(Order order) {
         orderRepository.save(order);
     }
 }
