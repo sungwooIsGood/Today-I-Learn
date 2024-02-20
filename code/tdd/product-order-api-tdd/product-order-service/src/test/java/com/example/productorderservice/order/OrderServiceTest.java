@@ -42,6 +42,11 @@ public class OrderServiceTest extends APITest {
     void API테스트(){
         AddProductRequest 상품등록요청_생성 = ProductSteps.상품등록요청_생성();
 
+        ExtractableResponse<Response> response = 상품주문요청(상품등록요청_생성);
+
+        assertThat(response).isEqualTo(HttpStatus.CREATED.value());
+    }
+    private static ExtractableResponse<Response> 상품주문요청(AddProductRequest 상품등록요청_생성) {
         ExtractableResponse<Response> response = RestAssured.given().log().all()
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .body(상품등록요청_생성)
@@ -49,7 +54,6 @@ public class OrderServiceTest extends APITest {
                 .post("/orders")
                 .then()
                 .log().all().extract();
-
-        assertThat(response).isEqualTo(HttpStatus.CREATED.value());
+        return response;
     }
 }
