@@ -10,7 +10,7 @@
 
 ### MySQL 전체 구조
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/f85e8279-9131-4986-a217-6bc320ed026a/Untitled.png)
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/images/mysql_structure.png)
 
 MySQL 서버는 크게 **MySQL 엔진**과 **스토리지 엔진**으로 구분할 수 있다. 또, 구분한 이 두 부분을 합쳐서 MySQL 또는 MySQL 서버라고 표현할 수 있다.
 
@@ -30,7 +30,7 @@ MySQL 서버는 크게 **MySQL 엔진**과 **스토리지 엔진**으로 구분�
 
 ### MySQL 스레딩 구조
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/6e74b9c0-770e-4cf0-bc01-ae7856b48496/Untitled.png)
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/images/mysql_thread_structure.png)
 
 먼저, MySQL 서버는 프로세스 기반이 아닌 스레드 기반으로 작동하며, 크게는 **포그라운드 스레드**와 **백그라운드 스레드**로 구분한다.
 
@@ -46,7 +46,7 @@ MySQL 서버는 크게 **MySQL 엔진**과 **스토리지 엔진**으로 구분�
 
 ### 쿼리 실행 구조
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/7736fc1e-b96d-4be1-b4ac-9861736d80d7/Untitled.png)
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/images/mysql_build_structure.png)
 
 위에서 MySQL 구조를 살펴 보았다. 구조를 알았다면 쿼리가 어떻게 실행되는지 궁금한건 당연지사! 하나씩 자세하게 살펴보자.
 
@@ -87,7 +87,7 @@ MySQL 서버 안에서 가장 먼저 만나게 되는 부분은 MySQL엔진 안�
 
 ### 쿼리 캐시
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/85eedb35-e025-491a-bfe7-a32b3a381406/Untitled.png)
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/images/mysql_caching.png)
 
 위에서 설명했던 **복잡한 쿼리 절차로 만들어진 결과 값을 쿼리 캐시에 담아 두고, 동일한 쿼리 요청이 왔을 때 간단하게 쿼리 캐시에서 찾을 수 있다.** 이는 엄청난 효과로 가져올 수 있다. 하지만 이 쿼리 캐시에도 장단점이 있어 이점을 알고 사용하는 것이 매우 중요하다.
 
