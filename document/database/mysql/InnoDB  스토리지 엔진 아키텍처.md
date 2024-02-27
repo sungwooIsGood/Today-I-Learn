@@ -6,7 +6,7 @@ InnoDB는 MySQL의 모든 스토리지 엔진 중 **유일하게 레코드 기�
 
 ### InnoDB 구조 및 특징
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/57c8957e-86d4-42c3-8fc4-5d781c8ce661/Untitled.png)
+![Untitled]([https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/57c8957e-86d4-42c3-8fc4-5d781c8ce661/Untitled.png](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/images/innodb_structure.png))
 
 위 이미지는 InnoDB의 구조도이다. 이 구조들이 어떻게 동작 하는지 하나씩 살펴보기 전 특징들을 잠시 알아보자.
 
@@ -92,7 +92,7 @@ COMMIT;
 
 위 `Insert`  쿼리가 시작되면 아래와 같이 바뀐다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/45aaf191-c9cf-40c3-800b-2e820544958d/Untitled.png)
+![Untitled]([https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/45aaf191-c9cf-40c3-800b-2e820544958d/Untitled.png](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/images/MVCC%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B51.png))
 
 그 다음 MEMBER 테이블에 `Update` 쿼리를 실행해보자.
 
@@ -102,7 +102,7 @@ SET m_area = '경기'
 WHERE m_id = 12;
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/165cffc6-5425-4e08-a760-e10b1ab2969b/Untitled.png)
+![Untitled]([https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/165cffc6-5425-4e08-a760-e10b1ab2969b/Untitled.png](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/images/MVCC%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B52.png))
 
 `**Update` 쿼리가 실행 되면 커밋 관계 없이 InnoDB의 버퍼 풀은 “경기”로 바뀐다.**
 
