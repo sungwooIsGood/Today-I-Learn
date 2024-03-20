@@ -4,9 +4,9 @@ MariaDB 로그 파일은 일반적으로 **`/var/log/mysql`** 또는 **`/var/log
 
 기본적으로 MariaDB는 다음과 같은 로그 파일을 생성한다.
 
-- **`error.log`**: MariaDB에서 발생한 오류에 대한 정보를 기
-- **`query.log`**: 모든 쿼리에 대한 정보를 기
-- **`slow_query.log`**: 실행 시간이 긴 쿼리에 대한 정보를 기
+- **`error.log`**: MariaDB에서 발생한 오류에 대한 정보를 기록
+- **`query.log`**: 모든 쿼리에 대한 정보를 기록
+- **`slow_query.log`**: 실행 시간이 긴 쿼리에 대한 정보를 기록
 - **`binlog`**: 바이너리 로그 파일로, 데이터베이스 변경 사항을 기록
 
 로그 파일 이름은 보통 **`mysqld.log`**, **`mariadb.log`** 또는 **`error.log`**와 같이 정해져 있다. 따라서 **`/var/log/mysql`** 또는 **`/var/log/mariadb`** 디렉토리에서 이러한 파일을 찾아볼 수 있다.
