@@ -6,6 +6,9 @@
 
 - [spring scheduler 분석](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring/scheduler/spring-scheduler_%EB%B6%84%EC%84%9D.md)
 
+## JPA
+- [JPA를 활용한 배치 설정을 통해 대량 insert/update 시의 속도개선]()
+
 ## Databaase
 
 ### MySQL
