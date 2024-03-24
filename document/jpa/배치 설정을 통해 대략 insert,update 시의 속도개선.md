@@ -106,7 +106,8 @@ void saveAll() throws Exception {
 
 - 3개의 insert문이 나간 것을 확인했다. 이상하지 않은가??? 분명 batch를 설정하면 단 한번의 쿼리문이 나가는데 3개의 쿼리문이 나간 것이다. 아래와 같은 블로그를 보면 알 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3db859e7-fd52-4b1b-b6d4-14442e3ad061/Untitled.png)
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/0dfa8c91-dd9a-4a01-9cb4-8176a76ca01c)
+
 
 - **batch 옵션은 Hibernate가 직접 insert문을 합쳐주지는 않고 addBatch할 뿐이다.**
 - **MySQL JDBC의 경우 JDBC URL에 rewriteBatchedStatements=true 옵션을 추가해주면 된다.**
