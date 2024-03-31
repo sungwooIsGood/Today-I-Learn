@@ -22,7 +22,7 @@
 - [MariaDb의 로그 관리](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/MariaDB%EC%9D%98%20%EB%A1%9C%EA%B7%B8%20%EA%B4%80%EB%A6%AC.md)
 
 ## Redis
-- [MGET에 대해]()
+- [MGET에 대해](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/redis/MGET%EC%97%90%20%EB%8C%80%ED%95%B4.md)
 
 ## OOP
 
