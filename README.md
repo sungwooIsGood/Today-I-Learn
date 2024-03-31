@@ -20,6 +20,10 @@
 - [인덱스](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/%EC%9D%B8%EB%8D%B1%EC%8A%A4.md)
 - [인덱스 알고리즘들의 종류](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20%EC%A2%85%EB%A5%98.md)
 - [MariaDb의 로그 관리](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/MariaDB%EC%9D%98%20%EB%A1%9C%EA%B7%B8%20%EA%B4%80%EB%A6%AC.md)
+
+## Redis
+- [MGET에 대해]()
+
 ## OOP
 
 - [프로젝트의 유연성, 객체지향 설계(1)](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/oop/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%9D%98%20%EC%9C%A0%EC%97%B0%EC%84%B1%2C%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%84%A4%EA%B3%84(1).md)
