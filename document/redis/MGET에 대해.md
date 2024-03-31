@@ -8,7 +8,7 @@
 MGET key [key ...]
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/3f2a9cc1-7f3f-49c7-9551-323392b92f76/Untitled.png)
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/d1707475-433f-4039-b7a5-59822896d992)
 
 - **Java**
     - java에서는 `multiGet()` 메서드를 이용하면 된다.
@@ -30,7 +30,7 @@ public void mget(){
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/9b38446f-e7d2-442f-b570-9d544934c6f9/Untitled.png)
+![Untitled (1)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/849d6959-cb38-41b2-b3a5-f3c4d3071330)
 
 사용법은 어디서든 찾아볼 수 있지만 위에 있는 `MGET` 명령어가 과연 효과가 있는지, 성능이 있는지, 동작 방식이 어떻게 되는지 좀 더 살펴보고 싶다. 그래야 우린 실제로 사용할지 말지를 결정하니까..
 
@@ -87,7 +87,7 @@ private void get(ValueOperations<String, Object> operations){
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/a90b220c-ea75-468e-a12c-99a4b4b51947/Untitled.png)
+![Untitled (2)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/c37c1da6-1941-4650-9814-f51e060ba048)
 
 월등한 성능차이를 볼 수있었다. 이처럼 여러개의 `key`를 찾을 때 `GET`보다는 `MGET`을 사용해보는 어떨까 하는 마음이고 실제로 써볼 상황이 오면 좋겠다.
 
