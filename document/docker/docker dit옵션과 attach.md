@@ -8,7 +8,7 @@ docker hub 사이트에 들어가서 매번 docker image를 pull해오는 것은
 docker run -d --name myubuntu ubuntu
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/88e33c2e-3ce6-4fe6-8180-b2de7792d2ab/Untitled.png)
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/be2fe306-d24f-4087-b0dc-2d06c1f881b2)
 
 이 때, docker가 제대로 돌아가는지 확인해보기 위해 아래 명령어를 입력해주었다.
 
@@ -16,7 +16,7 @@ docker run -d --name myubuntu ubuntu
 docker ps
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/a12b9a79-13f6-4370-a13b-9ded26790866/Untitled.png)
+![Untitled (1)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/d7599956-951d-459a-99ed-617a782a610c)
 
 없다? 그럼 이미지는 제대로 받아졌는지 확인해보자.
 
@@ -24,7 +24,7 @@ docker ps
 docker images
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/96c28801-ae4d-4970-8ba5-6bf08071d02e/Untitled.png)
+![Untitled (2)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/4db2b8b5-a446-48b1-9ef7-187b848ff454)
 
 image는 있는데 왜 컨테이너 상태로 동작 되지 않은 것일까?
 
@@ -34,13 +34,13 @@ image는 있는데 왜 컨테이너 상태로 동작 되지 않은 것일까?
 docker run -d --name myhttpd httpd
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/071fb385-52b7-457f-8c92-c6899fdd6ec0/Untitled.png)
+![Untitled (3)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/38094a22-9708-41cd-8d38-6017cdf4ae48)
 
 ```sql
 docker ps
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/e7196cd4-b1ea-48f3-9ccb-590720514f78/Untitled.png)
+![Untitled (4)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/77a9e72f-a170-4735-9c8c-cd9f4cb3588d)
 
 아파치 서버는 `docker ps` 명령어를 통해 정상적으로 run 되어있는 것을 볼 수 있다. ‘ubuntu’ 와 ‘httpd’ 이미지 간의 차이점은 무엇일까???
 
@@ -52,7 +52,7 @@ docker ps
 
 아래 이미지는 위에 말을 뒷받침 해주는 이미지이다. container가 정적인 상태이다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/b8327339-db85-4f18-983a-3b799b50d7d4/Untitled.png)
+![Untitled (5)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/71907d46-4f74-417f-bb04-b28d85c4b011)
 
 ### 그럼 깡통 OS를 run 시키는 방법은 아예 없나?
 
@@ -81,7 +81,7 @@ docker ps
 docker run -dit --name myubuntu ubuntu
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/5661fe53-d936-4e1f-82a5-34ff984ec876/Untitled.png)
+![Untitled (6)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/bae0bb3b-b77f-49d4-af7e-daacb9d0e2c2)
 
 위에 이미지에서 살펴볼 점은 `COMMAND` 와 `NAMES` 이다.
 
@@ -111,7 +111,7 @@ docker run -dit --name myubuntu ubuntu
 (window)winpty docker attach myubuntu
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/6ca3af20-0e26-4116-8d7a-78e9018b0367/Untitled.png)
+![Untitled (7)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/9b8cc48e-2bbd-4186-94f3-2fc6dea49cbd)
 
 * window 환경에서 진행했었음.
 
