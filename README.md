@@ -24,6 +24,9 @@
 ## Redis
 - [MGET에 대해](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/redis/MGET%EC%97%90%20%EB%8C%80%ED%95%B4.md)
 
+## docker
+- [dit옵션과 attach]()
+
 ## OOP
 
 - [프로젝트의 유연성, 객체지향 설계(1)](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/oop/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%9D%98%20%EC%9C%A0%EC%97%B0%EC%84%B1%2C%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%84%A4%EA%B3%84(1).md)
