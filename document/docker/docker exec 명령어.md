@@ -33,7 +33,7 @@ docker exec -it myhttpd /bin/bash
 - `-it` : 앞에 d를 붙이지 않는 것은 우린 백그라운드로 접속하지 않을 것이기 때문이다.
 - `bash` : 리눅스 및 유닉스 기반 시스템에서 사용되는 Bourne Again Shell (Bash)의 실행 파일 경로, Bash는 가장 일반적으로 사용되는 셸(shell) 중 하나로, 사용자와 시스템 간의 상호 작용을 가능하게 한다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/8fea963c-6f01-4e2a-aa54-d1fe5ae94f53/Untitled.png)
+![Untitled (13)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/503b673b-8687-4956-8096-2602c2208f53)
 
 ‘winpty’는 window에서 git bash를 열고 쳤을 때 입력 해주어야 한다. 여하튼, 잘 접속이 되는 것을 확인했다.
 
