@@ -32,4 +32,4 @@
 - [프로젝트의 유연성, 객체지향 설계(2)](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/oop/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%9D%98%20%EC%9C%A0%EC%97%B0%EC%84%B1,%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%84%A4%EA%B3%84(2).md)
 
 ## NCP
-- [NCP 클라우드 - 서버생성 실습편]()
+- [NCP 클라우드 - 서버생성 실습편](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/ncp/ncp%20%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%20-%20%EC%84%9C%EB%B2%84%20%EC%83%9D%EC%84%B1%20%EC%8B%A4%EC%8A%B5.md)
