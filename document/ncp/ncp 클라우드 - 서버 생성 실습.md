@@ -88,7 +88,7 @@
             2. 프로토콜 : TCP, 목적지 : 0.0.0.0/0 허용 포트 : 1-65535 입력 후, “+추가” 클릭
             3. 프로토콜 : UDP, 목적지 : 0.0.0.0/0 허용 포트 : 1-65535 입력 후, “+추가” 클릭
 
-               ![스크린샷 2024-04-08 오후 8.09.58.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/9f10183c-1dd9-42d6-ab4f-fce61730354e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.09.58.png)
+               <img width="942" alt="스크린샷 2024-04-08 오후 8 09 58" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/93e8e769-9dc2-4a2f-91ae-33262c47363b">
 
 
 1. 초기화 스크립트 만들기
@@ -96,14 +96,14 @@
         1. 아래 스크립트의 내용은 서버 부팅 후 아파치 웹서버와 PHP를 설치하고 테스트 페이지를 다운받은 후, 설정 내용을 수정 후 아파치 웹서버를 기동하는 스크립트이다.
         2. 스크립트를 잘 설정해두면 서버의 이미지라든지 서버 생성 후 초기화 작업을 쉽게 가져갈 수 있다.
 
-       ![스크린샷 2024-04-08 오후 8.11.18.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/3a427f56-f356-45f0-897c-46af885a4ea3/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.11.18.png)
+       <img width="972" alt="스크린샷 2024-04-08 오후 8 11 18" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/287a1fd2-a245-4bb2-8741-8342ef234d60">
 
 
 1. 웹서버 만들기
     1. Product & Services → Server → 서버생성 클릭
         1. OS타입 Rocky이며, 하이퍼바이저 KVM으로 선택 후 rocky linux-8.8을 선택
 
-           ![스크린샷 2024-04-08 오후 8.13.57.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/f6b16870-a22d-413c-89d5-7d0564ba76ba/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.13.57.png)
+           <img width="1116" alt="스크린샷 2024-04-08 오후 8 13 57" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/db8343ba-df24-4b82-a173-d6f5354ff3d2">
 
     2. VPC와 Subnet은 앞에 만든 것으로 선택
     3. 서버 타입”은 Standard ,vCPU 2개, 메모리 8GB, 디스크 50GB
@@ -111,15 +111,15 @@
     5. Network Interface는 new interface 선택, IP는 10.0.1.101 을 입력 후, +추가 클릭
     6. Script 선택에서 앞에서 저장한 lab-script 를 선택, 다음  클릭
 
-       ![스크린샷 2024-04-08 오후 8.16.32.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/dd8367d5-3adc-47d9-ae72-e09a79292663/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.16.32.png)
+       ![스크린샷 2024-04-08 오후 8 16 32](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/855ab936-83ff-430d-82ce-ae4608ceda09)
 
     7. 인증키 설정과 관련해서는 새로운 인증키를 받아야한다. ‘새로운 인증키 생성’을 클릭 `.pem` 파일을 받아볼 수 있다.
 
-       ![스크린샷 2024-04-08 오후 8.18.35.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/ea269c04-de47-45ca-844a-c58463836fc7/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.18.35.png)
+       ![스크린샷 2024-04-08 오후 8 18 35](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/2379d832-8b64-4f71-988c-10ff5fb01c5c)
 
     8. 네트워크 접근 설정에서 디바이스 eth0 에 lab-org를 선택, ACG는 네트워크 디바이스마다 할당이 가능하며, 1개의 네트워크 디바이스 당 최대 3개의 ACG 매핑 가능하다.
 
-       ![스크린샷 2024-04-08 오후 8.19.17.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/1c3b8300-d6cb-44c0-baf2-d5e8b40c1990/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.19.17.png)
+       <img width="638" alt="스크린샷 2024-04-08 오후 8 19 17" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/76c8cd64-6e62-4125-a556-498812483c75">
 
     9. 다음을 누른 후 ‘서버 생성’을 클릭하면 서버가 만들어 진다. 서버가 만들어지는데 시간이 꽤 걸린다.
 
@@ -127,11 +127,11 @@
     1. Server → Public IP 선택
         1. 이 때, 서버가 만들어져야지만 IP를 생성할 수있으니 좀 기다리다가 생성하면 된다.
 
-           ![스크린샷 2024-04-08 오후 8.41.26.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/0fecc300-1e38-4d49-b71e-314ab40e757b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.41.26.png)
+           <img width="667" alt="스크린샷 2024-04-08 오후 8 41 26" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/34849969-baaa-4110-b569-380e228eaa10">
 
 한번 제대로 만들어 졌는지 접속해보자.
 
-![스크린샷 2024-04-08 오후 8.41.43.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/98487099-2114-4824-b0c7-0e4e31728084/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.41.43.png)
+<img width="1114" alt="스크린샷 2024-04-08 오후 8 41 43" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/27b1efa0-6142-4bcc-b241-b964f58e2252">
 
 
 
