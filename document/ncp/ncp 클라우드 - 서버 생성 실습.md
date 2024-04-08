@@ -1,6 +1,10 @@
 # ncp 클라우드 - 서버 생성 실습
 
-지난 4월 5일 NCP Hands ON 교육 과정을 다녀오고 다시 실습 해보면서 적은 내용이다. 클라우드 서비스를 이용하기 전 몇 가지 용어들을 알 필요가 있다고 생각한다.
+지난 4월 5일 NCP Hands ON 교육 과정을 다녀오고 다시 실습 해보면서 적은 내용이다. 작은 스타트업 개발자로써 성장해가며 회사에서 인프라까지 슬슬 넓혀가며 공부해보고 싶어 다녀오게 되었다. 
+
+---
+
+클라우드에 대해 먼저 용어 정리가 필요하기에 몇가지 용어를 먼저 간단하게 짚고 가보자.
 
 - **VPN**
     - 가상 사설망으로 사용자가 사설망에 연결된 것처럼 인터넷에 액세스할 수 있도록 하는 인터넷 보안 서비스이다. 예를 들어, 네트워크A와 네트워크B가 실제로 같은 네트워크상에 있지만 논리적으로 다른 네트워크인 것처럼 동작한다.
@@ -26,16 +30,16 @@
 
 ### 서버 생성 및 접속
 
-![스크린샷 2024-04-05 오후 1.40.44.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/6d361c48-bba5-4306-9961-8a7cf82a215c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-05_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.40.44.png)
+<img width="268" alt="스크린샷 2024-04-05 오후 1 40 44" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/957036f8-ad0e-4e78-9a1b-4ca162633ddc">
 
 1. 웹 서버를 위한 VPC
     1. Product & Services → VPC → VPC Management → VPC 생성
 
-       ![스크린샷 2024-04-08 오후 7.52.24.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/403f1180-2b22-48c2-9f8b-b9e23e754edc/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.52.24.png)
+       <img width="698" alt="스크린샷 2024-04-08 오후 7 52 24" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/e7b342cd-4dba-4044-b4eb-95db36141a3b">
 
     2. Product & Services → VPC → Network ACL →  ACL Rule → Network ACL 생성
 
-       ![스크린샷 2024-04-08 오후 7.54.49.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/8804cfc9-e631-4fc0-8c78-37acafa6b337/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.54.49.png)
+       <img width="799" alt="스크린샷 2024-04-08 오후 7 54 49" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/71cab18f-7fa1-45df-b265-6ce34abc3747">
 
     3. NACL을 생성했다면 다음 NACL의 보안의 Rule을 정해야한다.
         1. 만든 NACL을 클릭한 후 ‘Rule 설정’을 진행한다.
@@ -47,7 +51,7 @@
             3. 우선순위: 2, 프로토콜: TCP, 접근 소스: myIp, 포트: 22, 허용여부: 허용 선택 후, “+추가” 클릭
             4. 우선순위: 197, 프로토콜: TCP, 접근소스: 0.0.0.0/0, 포트: 22, 허용여부: 차단 선택 후, “+추가” 클릭
 
-       ![스크린샷 2024-04-08 오후 7.57.52.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/506e1bcb-dc69-4841-8a68-5acd2d1d7a9b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.57.52.png)
+       <img width="963" alt="스크린샷 2024-04-08 오후 7 57 52" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/2df78e14-03a1-4caf-aed0-f5b8e7bffcc3">
 
         1. Outbound 규칙
             1. 우선순위: 0, 프로토콜: ICMP, 접근 소스: 0.0.0.0/0, 허용여부: 허용 선택 후, “+추가” 클릭
@@ -55,19 +59,19 @@
         2. 1-65535 처럼 포트의 범위를 지정할 수 있다.
     4. 우선순위: 2, 프로토콜: UDP, 접근 소스: 0.0.0.0/0, 포트:1-65535, 허용여부: 허용 선택 후, “+추가” 클릭
 
-       ![스크린샷 2024-04-08 오후 7.59.04.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/a0b3ab94-f065-4e15-a946-219b8cddfb14/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.59.04.png)
+       <img width="969" alt="스크린샷 2024-04-08 오후 7 59 04" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/0d9e12da-25e8-49a2-9292-629f77d112c5">
 
 
 1. 웹 서버를 위한 Subnet
     1. Product & Services → VPC →  Subnet Management 선택 → Subnet 생성 선택
 
-       ![스크린샷 2024-04-08 오후 8.03.55.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/d7125cf6-1d54-41ce-8eaf-c74534d42d2d/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.03.55.png)
+       <img width="681" alt="스크린샷 2024-04-08 오후 8 03 55" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/b2dd0fc2-577d-4d65-a2e6-6b2f7a25245c">
 
 
 1. 웹 서버 ACG 만들기
     1. Product & Services → Server → ACG 선택 → ACG 생성 선택
 
-       ![스크린샷 2024-04-08 오후 8.06.34.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/00753d92-993b-4385-8ca1-05f2305f75a9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.06.34.png)
+       <img width="695" alt="스크린샷 2024-04-08 오후 8 06 34" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/649b1643-79b1-45d2-ab39-8d48de4ac7f5">
 
     2. ACG를 생성 해주었다면 ACG 설정을 추가로 해주어야 한다. → ACG를 선택한 후 ‘ACG 설정’ 선택
         1. **Subnet은 net에 접속하기 전 보안**으로 Inbound 및 Outbound 설정을 해주어서 우선순위, 프로토콜, 허용할 접근 IP, 포트, 허용 여부를 판단해서 적어 주면 된다.
@@ -77,7 +81,7 @@
             2. 프로토콜 : TCP, 접근 소스 : 0.0.0.0/0 허용 포트 (서비스) : 80 입력 후, “+추가” 클릭
             3. 프로토콜 : TCP, 접근 소스 : myIp 허용 포트 : 22 선택 후, “+추가” 클릭
 
-               ![스크린샷 2024-04-08 오후 8.08.47.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/c26a5ead-50e5-4684-a3be-b2fd9ee33f82/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.08.47.png)
+               <img width="949" alt="스크린샷 2024-04-08 오후 8 08 47" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/9177f11f-2714-40a2-b75c-990ca6946fc1">
 
         3. Outbound 규칙 설정
             1. 프로토콜 : ICMP, 목적지 : 0.0.0.0/0 입력 후, “+추가” 클릭
