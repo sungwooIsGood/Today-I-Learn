@@ -129,11 +129,11 @@
 
            <img width="667" alt="스크린샷 2024-04-08 오후 8 41 26" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/34849969-baaa-4110-b569-380e228eaa10">
 
+            <img width="1114" alt="스크린샷 2024-04-08 오후 8 41 43" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/27b1efa0-6142-4bcc-b241-b964f58e2252">
+            
 한번 제대로 만들어 졌는지 접속해보자.
 
-<img width="1114" alt="스크린샷 2024-04-08 오후 8 41 43" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/27b1efa0-6142-4bcc-b241-b964f58e2252">
-
-
+<img width="375" alt="스크린샷 2024-04-08 오후 8 42 34" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/236a8da5-0620-40e1-b933-d7ce15df8640">
 
 클라우드 서버를 직접 만들어 보았으며, 다음에는 로드밸런서, DNS 설정 오토 스케일링, Cloud for DB 중 하나를 만들어 볼 예정이다.
 
