@@ -33,6 +33,6 @@
 
 ## Network
 - [클라우드 서비스](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/network/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%20%EC%84%9C%EB%B9%84%EC%8A%A4.md)
-
+- [VPC 개념과 보안 설정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/network/VPC%EA%B0%9C%EB%85%90%EA%B3%BC%20%EB%B3%B4%EC%95%88%20%EC%84%A4%EC%A0%95.md)
 ## NCP
 - [NCP 클라우드 - 서버생성 실습편](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/ncp/ncp%20%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%20-%20%EC%84%9C%EB%B2%84%20%EC%83%9D%EC%84%B1%20%EC%8B%A4%EC%8A%B5.md)
