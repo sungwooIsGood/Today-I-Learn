@@ -36,7 +36,7 @@
         - 하나의 서브넷은 하나의 NACL만 연동 가능, 단 하나의 NACL은 여러 서브넷에 연동 가능하다.(1:N)
 
   | ACG (Access Control Group) | NACL (Network ACL) |
-      | --- | --- |
+  | --- | --- |
   | 서버 NIC 단위로 적용 | Subnet 단위로 적용 |
   | Allow 규칙에 한하여 지원 | Allow, Deny 규칙 모두 지원 |
   | Stateful: Response 트래픽 자동 허용 | Stateless: Response 트래픽에 대한 Allow 규칙이 추가적으로 필요, 들어오는 트래픽과 나가는 트래픽을 구분하지 않는다. 들어오는 트래픽과 나가는 트래픽을 구분하지 않음, 즉 일반적으로 Outbound에 임시 포트 범위를 열어 주어야 정상적으로 통신 가능하다. |
