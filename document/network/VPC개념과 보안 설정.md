@@ -17,14 +17,14 @@
 
 ### 서브넷(Subnet)
 
-![스크린샷 2024-04-11 오후 10.18.13.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/91c7d210-5706-45e5-8385-22b020acc079/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-11_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_10.18.13.png)
+![스크린샷 2024-04-11 오후 10 18 13](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/5782ae99-b6a4-462c-bb31-3354eb9db5e0)
 
 - VPC 네트워크 대역 공간을 세분화하여 사용한다.
 - **인터넷 게이트웨이, NAT 게이트웨이용 서브넷을 별도로 생성하여 외부 인터넷과의 통신을 조절할 수 있다.**
     - **Public Subnet**
         - **VPC는 외부 서비스와의 통신이 기본적으로 안되는데 → 사설 IP 주소 대역을 사용하기 때문에, Public Subnet은 Internet gateway를 통해서 외부와의 통신이 가능하다.**
 
-          ![스크린샷 2024-04-11 오후 10.29.27.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/11e6883c-1f9e-491b-9325-c8da11537ffb/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-11_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_10.29.27.png)
+          ![스크린샷 2024-04-11 오후 10 29 27](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/4831788b-7e96-41ef-831b-d06989b20c2e)
 
     - **Private Subnet**
         - 기본적으로 외부와 차단되어 있다.
@@ -44,4 +44,4 @@
 
 쉽게 말해, 아래 사진을 보면 된다.
 
-![스크린샷 2024-04-11 오후 10.31.19.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/e9d4a8dd-ac6e-4840-867f-aefb6e139d60/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-11_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_10.31.19.png)
+![스크린샷 2024-04-11 오후 10 31 19](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/ab081a5b-a04c-4336-ab9a-e22bd4085eca)
