@@ -53,7 +53,7 @@
 ACG는 **서버 간** 네트워크의 접근을 제어하고 관리할 수 있는 IP/Port 기반 필터링 방화벽 서비스이다.
 **즉, 서버의 방화벽 역할을 한다.** 그래서 서버로 접근하는 IP/Port에 대해 Inbound/Outbound 룰 설정 가능하며,  NCP 같은 경우 default rule은 Inbound deny, Outbound Allow이다. 또, 프로토콜 별로 보안 설정이 가능하다.( TCP, UDP, ICMP 중)
 
-![스크린샷 2024-04-13 오후 4.50.06.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/2100a992-fc1a-4026-96bc-e975f601c3f3/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.50.06.png)
+<img width="267" alt="스크린샷 2024-04-13 오후 4 50 06" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/43e4e228-0875-4fbf-a12b-bc254a237f9f">
 
 위 그림에서 보다시피 Subnet을 통해 네트워크 레벨에서 NACL을 통해 보안을 1차적으로 걸어 준 후 서버로 Inbound/OutBound 할 때 추가로 ACG 보안을 걸어 두번의 보안 절차를 거치게 되는 것이다.
 
@@ -69,4 +69,4 @@ ACG는 **서버 간** 네트워크의 접근을 제어하고 관리할 수 있�
 
 통신 회선의 이중화가 가능하여 2개의 IPsec VPN 터널 또는 IPsec VPN과 Cloud Connect 터널 조합을 이용할 수 있다.
 
-![스크린샷 2024-04-13 오후 4.54.53.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/5a3bf4c0-7c33-4605-b7f3-9e64acf60120/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.54.53.png)
+<img width="479" alt="스크린샷 2024-04-13 오후 4 54 53" src="https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/027b50a8-f9f8-4904-92b5-7c5ba37f7260">
