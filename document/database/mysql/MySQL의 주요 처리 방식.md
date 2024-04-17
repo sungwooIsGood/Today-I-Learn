@@ -107,8 +107,7 @@ MySQL은 정렬을 수행하기 위해 별도의 메모리 공간을 할당 받�
         ORDER BY e.emp_no;
         ```
 
-       ![스크린샷 2024-04-16 오후 9 50 35](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/3a1e6a2e-9351-4db4-825c-fa79005a4fc5)
-
+       ![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/a09fa4d4-6199-46fd-8c38-ea0db33c38a5)
 
 1. **드라이빙 테이블만 정렬**
     1. 일반적으로 조인이 수행되면 결과 레코드의 건수가 몇 배로 불어난다. 그래서 **조인을 실행 전 첫 번째 테이블 레코드를 먼저 정렬한 다음 조인을 실행하는 것이 정렬의 차선책이다. 그래서 이 방법은 조인에 첫 번째 읽히는 테이블(드라이빙 테이블)의 컬럼만으로 ORDER BY 절에 작성되어야 한다.**
