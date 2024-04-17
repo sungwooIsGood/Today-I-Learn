@@ -107,7 +107,7 @@ MySQL은 정렬을 수행하기 위해 별도의 메모리 공간을 할당 받�
         ORDER BY e.emp_no;
         ```
 
-       ![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/a09fa4d4-6199-46fd-8c38-ea0db33c38a5)
+       ![스크린샷 2024-04-16 오후 9 50 35](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/3a1e6a2e-9351-4db4-825c-fa79005a4fc5)
 
 
 1. **드라이빙 테이블만 정렬**
@@ -125,4 +125,4 @@ MySQL은 정렬을 수행하기 위해 별도의 메모리 공간을 할당 받�
         1. 1. `WHERE`절의 검색 조건 - `E.EMP_NO between 100002 AND 100020` 은 employees 테이블의 PK를 이용해 검색하면 작업량을 줄일 수 있다.
         2. 2. 드라이븐 테이블(salaries)의 조인 컬럼인 emp_no 컬럼에 인덱스가 있다.
     3. 검색은 인덱스 레인지 스캔으로 처리할 수 있지만 `ORDER BY`절에 명시된 컬럼은 empoyees 테이블의 PK와 전혀 연관이 없으므로 **인덱스를 이용한 정렬이 불가능하다. 그런데, `ORDER BY` 절의 정렬 기준 컬럼이 드라이빙 테이블(employees)에 포함된 컬러임을 알 수 있다. 옵티마이저는 드라이빙 테이블만 검색해서 정렬을 먼저 수행하고, 그 결과와 salaries 테이블을 조인한 것이다.**
-       ![스크린샷 2024-04-16 오후 9 50 35](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/3a1e6a2e-9351-4db4-825c-fa79005a4fc5)
+       ![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/a09fa4d4-6199-46fd-8c38-ea0db33c38a5)
