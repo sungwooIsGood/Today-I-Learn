@@ -140,7 +140,7 @@ MySQL은 정렬을 수행하기 위해 별도의 메모리 공간을 할당 받�
         ORDER BY s.salary;
         ```
 
-       ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/b69e7d84-fba4-4f1b-84d7-bfc804493388/Untitled.png)
+       ![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/aa17bdc0-5269-4159-b7eb-fd7a7e45ac9c)
 
 
 
@@ -156,7 +156,7 @@ MySQL은 정렬을 수행하기 위해 별도의 메모리 공간을 할당 받�
 
 - **스트리밍 처리**
 
-  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/e763abd5-0b5e-4060-ac02-d7c5e91ebbb4/Untitled.png)
+  ![Untitled (1)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/465b60bb-19e5-4c45-b4be-1951bf9cdaa1)
 
     - **서버쪽에서 처리할 데이터가 얼마인지 관계없이 조건에 일치하는 레코드가 검색될 때 마다 즉시 클라이언트로 전송해주는 방식이다.**
     - 마지막 쿼리를 언제 받을지 알 수 없다. → 클라이언트 입장에서 중요x
@@ -164,7 +164,7 @@ MySQL은 정렬을 수행하기 위해 별도의 메모리 공간을 할당 받�
     - 조건에 맞는 레코드를 검색하면서 데이터 가공 작업 수행 가능
 - **버퍼링 처리**
 
-  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/1ac65145-d34a-4154-beae-4b645b4037f3/Untitled.png)
+  ![Untitled (2)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/1f5c1a79-ff0c-4b19-b037-f16f310a93ac)
 
     - **조건에 맞는 모든 레코드를 가져와서 한 번에 클라이언트에게 전송해주는 방식이다.**
     - `ORDER BY`, `GROUP BY` 는 스트리밍이 불가능하므로 이 방식 사용된다.`WHERE` 조건에 일치하는 모든 레코드를 가져온 후, 정렬하거나 그룹핑을 해서 차례대로 보내야 하기 때문이다.
