@@ -28,7 +28,7 @@ salaries 테이블에는 (emp+no + from_date)로 인덱스가 생성되어 있�
 
 위 쿼리 문장에서 `WHERE` 조건은 인덱스 레인지 스캔 접근 방식으로 이용할 수 없는 쿼리이다. 하지만 이 쿼리의 실행 계획은 **다음과 같이 인덱스 레인지 스캔을 이용**했으며,  Extra 컬럼의 메세지를 보면 GROUP BY 처리까지 인덱스를 사용한 것을 알 수 있다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/12bf542b-5018-42ea-832d-feeb60ef9155/Untitled.png)
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/15b29ced-2af0-4720-ac77-a1e4c856e3e2)
 
 실행 계획을 하나씩 뜯어 보자.
 
@@ -86,9 +86,9 @@ GROUP BY e.last_name;
 
 이 실행 계획에서 임시 테이블이 사용된 것은 employees 테이블을 풀 스캔하기 때문이 아니라 인덱스를 전혀 사용할 수 없는 `GROUP BY` 이기 때문이다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/00e330e7-51ab-4bec-8563-04c3107650c3/Untitled.png)
+![Untitled (1)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/5298b766-3205-4f26-9b30-f43e07dfbb00)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/e5bfa8c3-f108-4721-b454-dbb1893a8183/Untitled.png)
+![Untitled (2)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/6ba60dd9-d241-4c5b-b250-e4cc69f406a8)
 
 실행 계획을 하나씩 뜯어 보자.
 
