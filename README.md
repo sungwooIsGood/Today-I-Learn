@@ -20,6 +20,7 @@
 - [인덱스](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/%EC%9D%B8%EB%8D%B1%EC%8A%A4.md)
 - [인덱스 알고리즘들의 종류](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20%EC%A2%85%EB%A5%98.md)
 - [MariaDb의 로그 관리](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/MariaDB%EC%9D%98%20%EB%A1%9C%EA%B7%B8%20%EA%B4%80%EB%A6%AC.md)
+- [MySQL의 정렬 처리 방식](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/MySQL%EC%9D%98%20%EC%A0%95%EB%A0%AC%20%EC%B2%98%EB%A6%AC%20)
 - [MySQL의 GroupBY 처리 방식](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/MySQL%20Group%20BY%20%EC%B2%98%EB%A6%AC%EB%B0%A9%EC%8B%9D.md)
 
 ## Redis
