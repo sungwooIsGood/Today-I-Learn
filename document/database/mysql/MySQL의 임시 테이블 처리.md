@@ -37,7 +37,7 @@ GROUP BY last_name
 ORDER BY first_name;
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/d0ff16cb-533c-413f-b16e-641a41c86eff/Untitled.png)
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/93b010a5-c4bf-484b-b542-453941c74ad3)
 
 Rows컬럼의 값을 보면 이 쿼리는 대략 처리해야 하는 레코드 건수가 30만 건 정도라는 사실을 알 수 있다.
 
