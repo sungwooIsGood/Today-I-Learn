@@ -12,7 +12,7 @@ CMD ["httpd-foreground"]
 
 webapp 디렉토리 index.html 파일이 들어있다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/a6ad3c4f-9e93-443a-9c2b-a377055fafe9/Untitled.png)
+![Untitled (4)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/dc5f914b-3d8f-4616-94c0-7e2fcbc117f2)
 
 **FROM**: 사용할 기본(base) 이미지를 지정하는 지시문이다. **`FROM`** 지시문은 Docker 컨테이너 이미지를 빌드할 때 가장 먼저 나타나야 한다. 기본 이미지는 컨테이너를 시작하는 데 사용되며, 해당 이미지를 기반으로 컨테이너 이미지를 빌드한다.
 
@@ -55,10 +55,8 @@ docker run -dit -p 8080:80 --name webserver webserver
 
 - 정상적으로 컨테이너가 작동
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/0293dc5b-afbd-4606-8112-4fc8d0106649/Untitled.png)
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/5dbc7ffd-1d30-494f-af62-382e6c67c7cc/Untitled.png)
+![Untitled (5)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/1cbbcf86-6ca7-4294-9f3c-45395682a30b)
 
 원래대로라면 `docker run -dit -p 8080:80 webserver` 명령어대로라면 8080에는 ‘**it works!’가 떠야하지만 COPY 때문에** htdocs 디렉토리안에 index.html 파일이 들어있는 것을 눈으로 확인해볼 수 있었다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/1b22554b-7dec-4fd1-8ba9-2226bb3801f6/Untitled.png)
+![Untitled (6)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/5da6723d-213e-4987-95a1-a9dece6201e5)
