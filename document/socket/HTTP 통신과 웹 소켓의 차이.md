@@ -36,7 +36,7 @@ HTTP만을 사용하면 서버는 클라이언트가 누구인지 식별하지 �
 
 ## 웹 소켓의 동작 원리
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/bafcbad5-7b72-43e3-81d9-104f316ce38f/Untitled.png)
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/a458aa57-1abd-45dd-9c53-a56bd7294550)
 
 웹 소켓 동작 과정은 크게 세가지로 나눌 수 있다.
 
