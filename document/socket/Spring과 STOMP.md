@@ -69,7 +69,8 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
 ### **Spring STOMP 구조**
 
-![img1.daumcdn.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/6122c3e7-05d8-4b57-a83e-d9137b1c9edb/img1.daumcdn.png)
+![img1 daumcdn](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/7487ea7e-ecc6-4c95-9e02-b9c78fc55f51)
+
 
 - STOMP의 형식은 HTTP와 닮아있다.
 
