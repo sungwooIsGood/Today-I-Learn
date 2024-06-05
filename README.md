@@ -1,6 +1,7 @@
 # Today I Learn - study for me 🎓
 
 ## Java
+- [java의 숫자 형식]() 
 
 ## Spring
 
