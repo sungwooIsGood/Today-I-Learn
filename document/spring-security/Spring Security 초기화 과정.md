@@ -46,8 +46,9 @@ Spring Security는 초기화 시 인증 & 인가와 관련된 여러가지 작�
 
 ![Untitled (2)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/505251b1-3434-43cb-bc31-58148e4feae5)
 
-1. **SecurityBuilder를 통해 HttpSecurity 빈 객체가 생성된다.**
-2. **HttpSecurity빈이 SecurityConfigurer 객체의 초기화 작업을 진행한다.**
-3. **초기화 작업이 진행되며 각 Configurer들에서 각각의 Filter들이 생성된다.**
-4. **Filter들에 의해 HttpSecurity는 여러개의 Filter들을 가진 객체가 되어있는 것이다.**
-5. **HttpSecurity를 가지고 build를 하게 되며 초기화 작업이 완성된다.**
+1. **자동 설정 클래스에 의해 HttpSecurityConfiguration 클래스가 생성된다.**
+2. **SecurityBuilder를 통해 HttpSecurity 빈 객체가 생성된다.**
+3. **HttpSecurity빈이 SecurityConfigurer 객체의 초기화 작업을 진행한다.**
+4. **초기화 작업이 진행되며 각 Configurer들에서 각각의 Filter들이 생성된다.**
+5. **Filter들에 의해 HttpSecurity는 여러개의 Filter들을 가진 객체가 되어있는 것이다.**
+6. **HttpSecurity를 가지고 build를 하게 되며 초기화 작업이 완성된다.**
