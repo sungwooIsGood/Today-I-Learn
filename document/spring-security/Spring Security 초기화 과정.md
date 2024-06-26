@@ -29,11 +29,13 @@ Spring Security는 초기화 시 인증 & 인가와 관련된 여러가지 작�
 - **SecurityConfigurer**
     - **Http 요청과 관련된 보안 처리를 담당하는 필터들을 생성하고 여러 초기화 설정**에 관여한다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/ad183735-4bce-456c-96ba-dec7c8c14ae6/Untitled.png)
+![Untitled (1)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/c759a07c-9c1b-45cf-83e4-d5afabf97f08)
+
 
 큰 줄기는 대략 이렇다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/8ed89d28-c68e-4bb6-8c57-3f9c61473319/Untitled.png)
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/7a22ee9d-28a8-4818-8f6f-b7a9d5b61b62)
+
 
 1. 프로젝트가 빌드 되면서 자동 설정에 의해 Security Builder 클래스를 생성한다.
 2. Security Builder는 Security Configurer를 생성한다.
@@ -42,7 +44,7 @@ Spring Security는 초기화 시 인증 & 인가와 관련된 여러가지 작�
 
 구체적으로 한번 보자.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/12bc7235-38df-486f-814c-1a9cc35069ae/Untitled.png)
+![Untitled (2)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/505251b1-3434-43cb-bc31-58148e4feae5)
 
 1. **SecurityBuilder를 통해 HttpSecurity 빈 객체가 생성된다.**
 2. **HttpSecurity빈이 SecurityConfigurer 객체의 초기화 작업을 진행한다.**
