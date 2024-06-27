@@ -52,3 +52,50 @@ Spring Security는 초기화 시 인증 & 인가와 관련된 여러가지 작�
 4. **초기화 작업이 진행되며 각 Configurer들에서 각각의 Filter들이 생성된다.**
 5. **Filter들에 의해 HttpSecurity는 여러개의 Filter들을 가진 객체가 되어있는 것이다.**
 6. **HttpSecurity를 가지고 build를 하게 되며 초기화 작업이 완성된다.**
+
+---
+
+## WebSecurity / HttpSecurity
+
+### HttpSecurity
+
+- **HttpSecurityConfiguration 에서 HttpSecurity 를 생성하고 초기화**를 진행한다.
+- **HttpSecurity는 보안에 필요한 각 설정 클래스와 필터들을 생성하고 최종적으로 SecurityFilterChain 빈 생성한다.**
+
+![Untitled](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/fb3a0d23-fb0e-4049-9722-851b2c60a6b5)
+
+1. HttpSecurity 객체는 내부적으로 각 Configurer들을 생성하고 설정 클래스들을 통해 초기화 작업을 시작한다.
+2. `build()` 메서드가 실행되면 `init()` 과 `configurer()` 메서드를 통해 필터들이 생성이 되며 SecurityFilterChain이라는 빈이 생성이 되면서 여러개의 Filter 목록들이 저장된다.
+3. SecurityFilterChain 는 각 인증/인가 처리 할 필터들을 가지게 된다.
+
+### SecurityFilterChain 인터페이스
+
+- 여러 개의 Filter들을 관리한다.
+
+![Untitled (1)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/2a532259-85c7-4d2a-b33a-b5506dbc99ad)
+
+**`boolean matches(HttpServletRequest request)`**
+
+- 이 메서드는 클라이언트의 요청이 현재 **SecurityFilterChain에 의해 처리되어야 하는지 여부를 결정한다.**
+    - SecurityFilterChain은 하나가 아닌 여러 개가 생성될 수 있다. 그렇기 때문에 요청에 적합한 SecurityFilterChain을 **`matches()`**를 통해 생성한다.
+- true를 반환하면 현재 요청이 이 필터 체인에 의해 처리되어야 함을 의미하며, false를 반환하면
+  다른 필터 체인이나 처리 로직에 의해 처리되어야 함을 의미한다.
+- 이를 통해 특정 요청에 대해 적절한 보안 필터링 로직이 적용될 수 있도록 한다.
+
+**`List<Filter> getFilters()`**
+
+- 이 메서드는 현재 SecurityFilterChain 에 포함된 Filter 객체의 리스트를 반환한다.
+- **이 메서드를 통해 어떤 필터들이 현재 필터 체인에 포함되어 있는지 확인할 수 있으며**, **각 필터는
+  요청 처리 과정에서 특정 작업(예: 인증, 권한 부여, 로깅 등)을 수행한다.**
+
+![Untitled (2)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/66951295-ec9d-4990-aae5-22cce13d4e76)
+
+### WebSecurity
+
+- WebSecurityConfiguration에서 WebSecurity를 생성하고 초기화를 진행한다.
+- **WebSecurity는 HttpSecurity 에서 생성한 SecurityFilterChain 빈을 SecurityBuilder 에 저장한다.**
+- **WebSecurity가 build() 를 실행하면 SecurityBuilder에서 SecurityFilterChain을 꺼내어 FilterChainProxy 생성자에게 전달한다.**
+
+![Untitled (3)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/3128a471-ed2a-4f92-9b58-0d2a7541105d)
+
+- WebSecurity는 HttpSecurity 보다 상위의 개념이라고 볼 수 있다. HttpSecurity가 만든 SecurityFilterChain을 SecurityBuilder에 저장하기 때문이다. 또, 저장한 것을 Proxy에 전달하기 때문이다. **SecurityFilterChain는 이 자체로 목록을 가지고만 있을 뿐, 클라이언트의 요청을 처리하지 않는다. 요청 처리는 FilgerChainProxy에서 처리한다.**
