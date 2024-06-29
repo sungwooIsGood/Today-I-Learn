@@ -99,3 +99,7 @@ Spring Security는 초기화 시 인증 & 인가와 관련된 여러가지 작�
 ![Untitled (3)](https://github.com/sungwooIsGood/Today-I-Learn/assets/98163632/3128a471-ed2a-4f92-9b58-0d2a7541105d)
 
 - WebSecurity는 HttpSecurity 보다 상위의 개념이라고 볼 수 있다. HttpSecurity가 만든 SecurityFilterChain을 SecurityBuilder에 저장하기 때문이다. 또, 저장한 것을 Proxy에 전달하기 때문이다. **SecurityFilterChain는 이 자체로 목록을 가지고만 있을 뿐, 클라이언트의 요청을 처리하지 않는다. 요청 처리는 FilgerChainProxy에서 처리한다.**
+
+---
+
+다음 장에서 FilgerChainProxy이 무슨 역할을 하는지 알아보자. 지금까지는 Build 시 초기화 과정을 알아본 것이다. 다음 장에서는 요청 시 초기화 과정을 알아보자.
