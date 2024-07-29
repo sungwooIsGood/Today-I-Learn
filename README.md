@@ -7,7 +7,11 @@
 
 ### Scheculer
 
-- [Spring Security 초기화 과정]([https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring/scheduler/spring-scheduler_%EB%B6%84%EC%84%9D.md](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/Spring%20Security%20%EC%B4%88%EA%B8%B0%ED%99%94%20%EA%B3%BC%EC%A0%95.md))
+- [Spring Security 초기화 과정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring/scheduler/spring-scheduler_%EB%B6%84%EC%84%9D.md]
+
+### security
+
+- [사용자 정의 보안 설정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/Spring%20Security%20%EC%B4%88%EA%B8%B0%ED%99%94%20%EA%B3%BC%EC%A0%95.md)
 - [DelegatingFilterProxy&FilterChainProxy](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/DelegatingFilterProxy%26FilterChainProxy.md)
 - [사용자 정의 보안 설정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%EC%82%AC%EC%9A%A9%EC%9E%90%20%EC%A0%95%EC%9D%98%20%EB%B3%B4%EC%95%88%20%EC%84%A4%EC%A0%95.md)
 - [폼 방식 로그인](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%ED%8F%BC%20%EB%B0%A9%EC%8B%9D%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.md)
@@ -17,12 +21,6 @@
 - [세션 관리](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%EC%84%B8%EC%85%98%20%EA%B4%80%EB%A6%AC%20-%20sessionManagement().md)
 - [예외 처리](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%EC%98%88%EC%99%B8%20%EC%B2%98%EB%A6%AC.md)
 - [CORS/CSRF/SameSite](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/CORS_CSRF_SameSite.md)
-- 
-
-### security
-
-- [사용자 정의 보안 설정]()
-
 ## JPA
 - [JPA를 활용한 배치 설정을 통해 대량 insert/update 시의 속도개선](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/jpa/%EB%B0%B0%EC%B9%98%20%EC%84%A4%EC%A0%95%EC%9D%84%20%ED%86%B5%ED%95%B4%20%EB%8C%80%EB%9E%B5%20insert%2Cupdate%20%EC%8B%9C%EC%9D%98%20%EC%86%8D%EB%8F%84%EA%B0%9C%EC%84%A0.md)
 
