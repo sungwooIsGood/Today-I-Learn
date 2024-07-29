@@ -23,7 +23,7 @@
 - [CORS/CSRF/SameSite](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/CORS_CSRF_SameSite.md)
 - [인가 프로세스](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%EC%9D%B8%EA%B0%80%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4.md)
 - [인가 아키텍쳐(1)](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%EC%9D%B8%EA%B0%80%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90(1).md)
-- [인가 아키텍쳐(2)]()
+- [인가 아키텍쳐(2)](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%EC%9D%B8%EA%B0%80%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90(2).md)
 
 ## JPA
 - [JPA를 활용한 배치 설정을 통해 대량 insert/update 시의 속도개선](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/jpa/%EB%B0%B0%EC%B9%98%20%EC%84%A4%EC%A0%95%EC%9D%84%20%ED%86%B5%ED%95%B4%20%EB%8C%80%EB%9E%B5%20insert%2Cupdate%20%EC%8B%9C%EC%9D%98%20%EC%86%8D%EB%8F%84%EA%B0%9C%EC%84%A0.md)
