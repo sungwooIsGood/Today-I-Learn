@@ -25,7 +25,7 @@
 - [인가 아키텍쳐(1)](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%EC%9D%B8%EA%B0%80%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90(1).md)
 - [인가 아키텍쳐(2)](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%EC%9D%B8%EA%B0%80%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90(2).md)
 - [Servlet API 통합 / Spring MVC 통합](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/Servlet%20API%20%ED%86%B5%ED%95%A9_Spring%20MVC%20%ED%86%B5%ED%95%A9.md)
-- [고급 설정 - 다중 보안 설정, Custom DSLs-HttpSecurity.with(AbstractHttpConfigurer, Redis를 활용한 이중화 설정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%EA%B3%A0%EA%B8%89%20%EC%84%A4%EC%A0%95%20-%20%EB%8B%A4%EC%A4%91%20%EB%B3%B4%EC%95%88%20%EC%84%A4%EC%A0%95%2C%20Custom%20DSLs-HttpSecurity.with(AbstractHttpConfigurer%2C%20Redis%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EC%9D%B4%EC%A4%91%ED%99%94%20%EC%84%A4%EC%A0%95.md)
+- [고급 설정 - 다중 보안 설정, Custom DSLs-HttpSecurity.with(AbstractHttpConfigurer, Redis를 활용한 이중화 설정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%EA%B3%A0%EA%B8%89%20%EC%84%A4%EC%A0%95%20-%20%EB%8B%A4%EC%A4%91%20%EB%B3%B4%EC%95%88%20%EC%84%A4%EC%A0%95%2C%20Custom%20DSLs-HttpSecurity.with(AbstractHttpConfigurer%2C%20Redis%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EC%9D%B4%EC%A4%91%ED%99%94%20%EC%84%A4%EC%A0%95.md))
 
 
 ## JPA
