@@ -6,13 +6,13 @@ docker hub에 접속 한 후 nginx를 실행시켜보자.
 
 아래 이미지는 nginx에서 어떻게 실행 시키는지 알려주는 문서이다.
 
-<img width="599" alt="스크린샷 2023-09-17 오후 6 39 04" src="https://github.com/user-attachments/assets/a4f6c603-bfbd-453e-b740-292d95411942">
+<img width="666" alt="스크린샷 2023-09-17 오후 5 52 27" src="https://github.com/user-attachments/assets/3093281e-1f06-4f8d-a54a-91e3d0f33a92">
 
 ```jsx
 docker run -dit -p 8080:80 --name nginx nginx
 ```
 
-<img width="505" alt="스크린샷 2023-09-17 오후 6 36 45" src="https://github.com/user-attachments/assets/c242c894-e2d2-4ac5-87bf-2889d3bb738c">
+<img width="508" alt="스크린샷 2023-09-17 오후 5 54 56" src="https://github.com/user-attachments/assets/c4ddcef2-477d-41eb-a27a-9ea4122b5862">
 
 docker 컨테이너에 접속한 후 nginx가 어떻게 동작 하는지 알아보자. 알아야 하는 이유는 바로 Dockerfile을 작성하기 위해서이다. 어느 디렉토리에서 이 nginx가 동작하는지 파헤쳐보자.
 
@@ -20,15 +20,15 @@ docker 컨테이너에 접속한 후 nginx가 어떻게 동작 하는지 알아�
 docker exec -it nginx /bin/bash
 ```
 
-<img width="698" alt="스크린샷 2023-09-17 오후 6 15 59" src="https://github.com/user-attachments/assets/f0a113d0-3d88-4c90-880d-2a6dce688e07">
+<img width="666" alt="스크린샷 2023-09-17 오후 5 57 15" src="https://github.com/user-attachments/assets/10837fd0-c755-4030-bc39-53740ac8a997">
 
 root에 들어온 것을 확인해 볼 수 있다.
 
 맨 위에 nginx 문서를 보면 `/usr/share/nginx/html` 에서 동작 하는 것을 확인해볼 수 있다. 직접 디렉토리로 들어가보자.
 
-<img width="431" alt="스크린샷 2023-09-17 오후 5 59 16" src="https://github.com/user-attachments/assets/24f642a8-50c5-4305-a94d-e4c95c5d3cb0">
+<img width="372" alt="스크린샷 2023-09-17 오후 5 58 07" src="https://github.com/user-attachments/assets/aa21c958-363b-4ff0-91d4-9ef575d2085b">
 
-<img width="372" alt="스크린샷 2023-09-17 오후 5 58 07" src="https://github.com/user-attachments/assets/e9529868-4ccf-46c2-a06c-5f89dc111528">
+<img width="431" alt="스크린샷 2023-09-17 오후 5 59 16" src="https://github.com/user-attachments/assets/3e8bfb9b-9f7a-4285-a2fc-bda4207c7245">
 
 index.html을 수정해보고 싶다고 가정해보자. 근데 우린 편집기가 없다. 대신 `COPY` 명령어를 알고 있다. 구조도 알고 있고 그럼 본격적으로 Dockerfile을 run 해보자.
 
@@ -74,15 +74,15 @@ docker build -t nginx-server .
 docker run -dit -p 8080:80 --name nginx-server nginx-server
 ```
 
-<img width="666" alt="스크린샷 2023-09-17 오후 5 57 15" src="https://github.com/user-attachments/assets/b6966470-8d3d-4a96-ba73-3271157fe601">
+<img width="698" alt="스크린샷 2023-09-17 오후 6 15 59" src="https://github.com/user-attachments/assets/93c19ab0-9251-4080-aab7-3672eb91343b">
 
-<img width="508" alt="스크린샷 2023-09-17 오후 5 54 56" src="https://github.com/user-attachments/assets/df120f41-5ee7-4def-adc2-4a15b1ccf6c9">
+<img width="697" alt="스크린샷 2023-09-17 오후 6 16 18" src="https://github.com/user-attachments/assets/a09d3211-d031-45e8-a299-f661c1bb704a">
 
-<img width="666" alt="스크린샷 2023-09-17 오후 5 52 27" src="https://github.com/user-attachments/assets/3b6161e1-0f81-48a0-9515-165a4f22e3f1">
+<img width="505" alt="스크린샷 2023-09-17 오후 6 36 45" src="https://github.com/user-attachments/assets/2c7e18b4-0639-49ad-91de-63e85d60122d">
 
 컨테이너 안에서 ./index.html ./index.nginx-debian.html 내용이 잘 카피 되었는지 보자.
 
-![스크린샷 2023-09-17 오후 6.39.04.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/c2259d45-e41d-496f-b34d-843d822cca02/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-09-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6.39.04.png)
+<img width="599" alt="스크린샷 2023-09-17 오후 6 39 04" src="https://github.com/user-attachments/assets/7f1ac273-6db5-4e68-b2cd-a423426a3d82">
 
 `WORKDIR` 때문에 컨테이너에 접속 하자마자 `/` 폴더로 접근한게 아닌 `/var/www/html` 디렉토리로 접속한 것을 볼 수 있다. `cat` 명령어를 통해 `./index.nginx-debian.html` 파일 내용이 복사된 것을 눈으로 확인 해보았다.
 
