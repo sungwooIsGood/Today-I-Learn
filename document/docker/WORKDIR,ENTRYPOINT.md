@@ -77,7 +77,8 @@ docker build -t java.server .
 docker images
 ```
 
-<img width="709" alt="스크린샷 2023-09-17 오후 5 37 18" src="https://github.com/user-attachments/assets/3a9e35c5-2b41-4a80-8021-faeb2a80d32d">
+<img width="698" alt="스크린샷 2023-09-17 오후 5 36 02" src="https://github.com/user-attachments/assets/c8a8915b-edbc-47dd-899b-2b90ab6d64b0">
+
 
 그 후 컨테이너로 만들자.
 
@@ -85,11 +86,12 @@ docker images
 docker run -dit -p 8080:8081 --name java-server java-server
 ```
 
-<img width="548" alt="스크린샷 2023-09-17 오후 5 38 53" src="https://github.com/user-attachments/assets/dc64f9d7-4b62-4dba-9b12-f57d54155e86">
+<img width="709" alt="스크린샷 2023-09-17 오후 5 37 18" src="https://github.com/user-attachments/assets/3a9e35c5-2b41-4a80-8021-faeb2a80d32d">
+
 
 정상적으로 동작하여 `number` 에다 여러 값을 줘보자.
 
-<img width="698" alt="스크린샷 2023-09-17 오후 5 36 02" src="https://github.com/user-attachments/assets/c8a8915b-edbc-47dd-899b-2b90ab6d64b0">
+<img width="548" alt="스크린샷 2023-09-17 오후 5 38 53" src="https://github.com/user-attachments/assets/dc64f9d7-4b62-4dba-9b12-f57d54155e86">
 
 그 후 docker에서 log를 볼 수 있다.
 
