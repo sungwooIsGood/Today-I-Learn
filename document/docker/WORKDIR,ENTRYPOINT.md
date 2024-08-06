@@ -68,8 +68,8 @@ DockerFile을 빌드 시켜보자.
 ```docker
 docker build -t java.server .
 ```
-<img width="698" alt="스크린샷 2023-09-17 오후 5 36 02" src="https://github.com/user-attachments/assets/c8a8915b-edbc-47dd-899b-2b90ab6d64b0">
 
+<img width="703" alt="스크린샷 2023-09-17 오후 5 35 34" src="https://github.com/user-attachments/assets/95fb7a72-2e8a-4552-a0ce-557890d4a1a8">
 
 정상적으로 image가 생성되었는지 확인해보자.
 
@@ -89,7 +89,7 @@ docker run -dit -p 8080:8081 --name java-server java-server
 
 정상적으로 동작하여 `number` 에다 여러 값을 줘보자.
 
-<img width="703" alt="스크린샷 2023-09-17 오후 5 35 34" src="https://github.com/user-attachments/assets/95fb7a72-2e8a-4552-a0ce-557890d4a1a8">
+<img width="698" alt="스크린샷 2023-09-17 오후 5 36 02" src="https://github.com/user-attachments/assets/c8a8915b-edbc-47dd-899b-2b90ab6d64b0">
 
 그 후 docker에서 log를 볼 수 있다.
 
