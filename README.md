@@ -1,7 +1,8 @@
 # Today I Learn - study for me 🎓
 
 ## Java
-- [java의 숫자 형식]() 
+- [java의 숫자 형식]()
+- [JAR로 패키징 된 환경과 local 파일 구조 차이]()
 
 ## Spring
 
