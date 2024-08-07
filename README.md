@@ -1,7 +1,7 @@
 # Today I Learn - study for me 🎓
 
 ## Java
-- [java의 숫자 형식]()
+- [java의 숫자 형식 핸들링](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/java/Java%20%EC%88%AB%EC%9E%90%20%ED%98%95%EC%8B%9D%20%ED%95%B8%EB%93%A4%EB%A7%81.md)
 - [JAR로 패키징 된 환경과 local 파일 구조 차이]()
 - [ExecutorService-쓰레드풀 생성 to ExecutorService-쓰레드 생성](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/java/ExecutorService-%EC%93%B0%EB%A0%88%EB%93%9C%20%EC%83%9D%EC%84%B1.md)
 ## Spring
