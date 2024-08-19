@@ -3,7 +3,7 @@
 해당 프로토콜은 Pub/Sub 패턴을 사용한다.
 
 <aside>
-💡 **Pub/Sub 패턴
+💡 ** Pub/Sub 패턴
 
 Pub/Sub (Publish/Subscribe)는 메시지 브로커 패턴 중 하나로, 메시지 송신자(publisher)와 수신자(subscriber)를 분리하여 효율적인 메시지 전달 하는 패턴으로,** 메시지 브로커란 메시지(데이터) ****기반 통신에서 중개 역할을 하는 중간 소프트웨어 또는 서비스이다.
 
