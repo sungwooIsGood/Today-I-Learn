@@ -32,7 +32,7 @@
 ## JPA
 - [JPA를 활용한 배치 설정을 통해 대량 insert/update 시의 속도개선](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/jpa/%EB%B0%B0%EC%B9%98%20%EC%84%A4%EC%A0%95%EC%9D%84%20%ED%86%B5%ED%95%B4%20%EB%8C%80%EB%9E%B5%20insert%2Cupdate%20%EC%8B%9C%EC%9D%98%20%EC%86%8D%EB%8F%84%EA%B0%9C%EC%84%A0.md)
 - [낙관적 잠금, 비관적 잠금](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/jpa/%EB%82%99%EA%B4%80%EC%A0%81%20%EC%9E%A0%EA%B8%88%2C%20%EB%B9%84%EA%B4%80%EC%A0%81%20%EC%9E%A0%EA%B8%88.md)
-- [[JPA] 양방향 관계시 순환참조 - StackOverflowError]()
+- [양방향 관계시 순환참조 - StackOverflowError](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/jpa/%EC%96%91%EB%B0%A9%ED%96%A5%20%EA%B4%80%EA%B3%84%EC%8B%9C%20%EC%88%9C%ED%99%98%EC%B0%B8%EC%A1%B0_StackOverflowError.md)
 ## Databaase
 
 ### MySQL
