@@ -11,7 +11,7 @@
 - [Spring Security 초기화 과정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring/scheduler/spring-scheduler_%EB%B6%84%EC%84%9D.md)
 
 ### Security
-- [사용자 정의 보안 설정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/Spring%20Security%20%EC%B4%88%EA%B8%B0%ED%99%94%20%EA%B3%BC%EC%A0%95.md)
+- [Spring Security 초기화 과정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/Spring%20Security%20%EC%B4%88%EA%B8%B0%ED%99%94%20%EA%B3%BC%EC%A0%95.md)
 - [DelegatingFilterProxy&FilterChainProxy](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/DelegatingFilterProxy%26FilterChainProxy.md)
 - [사용자 정의 보안 설정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%EC%82%AC%EC%9A%A9%EC%9E%90%20%EC%A0%95%EC%9D%98%20%EB%B3%B4%EC%95%88%20%EC%84%A4%EC%A0%95.md)
 - [폼 방식 로그인](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/%ED%8F%BC%20%EB%B0%A9%EC%8B%9D%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.md)
