@@ -177,7 +177,7 @@ public class AsyncConfig {
 2024-02-13 10:53:30.013  INFO 11916 --- [    비동기Thread-2] com.study.scheduler.SchedulerService     : main Thread name: main, scheduler Thread name: 비동기Thread-2 run3에서 10초 마다 실행 합니다
 ```
 
-그럼 Queue size 도달하도록 코드를 수정해보고 어떤 에러가 반환 되는지 확인해보자.
+그럼 최대 Queue size 도달하도록 코드를 수정해보고 어떤 에러가 반환 되는지 확인해보자.
 
 ```java
 @EnableScheduling
