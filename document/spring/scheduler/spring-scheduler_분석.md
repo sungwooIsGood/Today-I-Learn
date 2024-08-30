@@ -180,27 +180,66 @@ public class AsyncConfig {
 그럼 Queue size 도달하도록 코드를 수정해보고 어떤 에러가 반환 되는지 확인해보자.
 
 ```java
-@Async
-@Scheduled(cron = "0/1 * * * * *")
-public void run1() throws InterruptedException {
-	String schedulerThreadName = Thread.currentThread().getName();
-	log.info("main Thread name: {}, scheduler Thread name: {} run1에서 10초 마다 실행 합니다.",mainThread,schedulerThreadName);
-	Thread.sleep(100000);
+@EnableScheduling
+@SpringBootApplication
+public class SchedulerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SchedulerApplication.class, args);
+	}
+}
+
+@Slf4j
+@Service
+class SchedulerService{
+
+	String mainThread = Thread.currentThread().getName();
+
+	@Async
+	@Scheduled(cron = "0/1 * * * * *")
+	public void run1() throws InterruptedException {
+		String schedulerThreadName = Thread.currentThread().getName();
+		log.info("main Thread name: {}, scheduler Thread name: {} run1에서 1초 마다 실행 합니다.",mainThread,schedulerThreadName);
+		Thread.sleep(100000);
+	}
+
+//	@Async
+//	@Scheduled(cron = "0/10 * * * * *")
+//	public void run2(){
+//		String schedulerThreadName = Thread.currentThread().getName();
+//		log.info("main Thread name: {}, scheduler Thread name: {} run2에서 10초 마다 실행 합니다.",mainThread,schedulerThreadName);
+//	}
+//
+//	@Async
+//	@Scheduled(cron = "0/10 * * * * *")
+//	public void run3(){
+//		String schedulerThreadName = Thread.currentThread().getName();
+//		log.info("main Thread name: {}, scheduler Thread name: {} run3에서 10초 마다 실행 합니다.",mainThread,schedulerThreadName);
+//	}
 }
 ```
 
 ```java
-2024-02-13 10:55:21.018  INFO 4740 --- [    비동기Thread-1] com.study.scheduler.SchedulerService     : main Thread name: main, scheduler Thread name: 비동기Thread-1 run1에서 10초 마다 실행 합니다.
-2024-02-13 10:55:22.002  INFO 4740 --- [    비동기Thread-2] com.study.scheduler.SchedulerService     : main Thread name: main, scheduler Thread name: 비동기Thread-2 run1에서 10초 마다 실행 합니다.
-2024-02-13 10:55:33.007  INFO 4740 --- [    비동기Thread-3] com.study.scheduler.SchedulerService     : main Thread name: main, scheduler Thread name: 비동기Thread-3 run1에서 10초 마다 실행 합니다.
-2024-02-13 10:55:34.004  INFO 4740 --- [    비동기Thread-4] com.study.scheduler.SchedulerService     : main Thread name: main, scheduler Thread name: 비동기Thread-4 run1에서 10초 마다 실행 합니다.
-2024-02-13 10:55:35.018  INFO 4740 --- [    비동기Thread-5] com.study.scheduler.SchedulerService     : main Thread name: main, scheduler Thread name: 비동기Thread-5 run1에서 10초 마다 실행 합니다.
+2024-02-13 10:55:21.018  INFO 4740 --- [    비동기Thread-1] com.study.scheduler.SchedulerService     : main Thread name: main, scheduler Thread name: 비동기Thread-1 run1에서 1초 마다 실행 합니다.
+2024-02-13 10:55:22.002  INFO 4740 --- [    비동기Thread-2] com.study.scheduler.SchedulerService     : main Thread name: main, scheduler Thread name: 비동기Thread-2 run1에서 1초 마다 실행 합니다.
+2024-02-13 10:55:33.007  INFO 4740 --- [    비동기Thread-3] com.study.scheduler.SchedulerService     : main Thread name: main, scheduler Thread name: 비동기Thread-3 run1에서 1초 마다 실행 합니다.
+2024-02-13 10:55:34.004  INFO 4740 --- [    비동기Thread-4] com.study.scheduler.SchedulerService     : main Thread name: main, scheduler Thread name: 비동기Thread-4 run1에서 1초 마다 실행 합니다.
+2024-02-13 10:55:35.018  INFO 4740 --- [    비동기Thread-5] com.study.scheduler.SchedulerService     : main Thread name: main, scheduler Thread name: 비동기Thread-5 run1에서 1초 마다 실행 합니다.
 Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@416899ad[Not completed, task = org.springframework.aop.interceptor.AsyncExecutionInterceptor$$Lambda$640/0x000002ab1134c168@5b828449] rejected from java.util.concurrent.ThreadPoolExecutor@780c4fd8[Running, pool size = 5, active threads = 5, queued tasks = 10, completed tasks = 0]
 ```
 
-최대 5개의 쓰레드가 생성 되고 Queue에 대기하는 쓰레드가 꽉차서 위 에러가 발생하게 된 것이다. 위와 같은 에러를 접했을 때 굉장히 당황스러웠었다.
+**원인 분석**
+run1 메서드는 1초마다 실행되도록 설정되어 있지만, Thread.sleep(100000)으로 인해 100초 동안 블록되는 상황을 만들어주었다. 이는 스레드가 작업을 완료하지 못하고 대기하게 만들어 새로운 작업이 쌓게 만들어 `AsyncConfig` 클래스에서 설정한 `executor.setQueueCapacity(10);`
+Queue 수용을 꽉 채웠을 때 에러 반환을 확인하는 목적이다. 
 
-이 계기로 스케줄러의 비동기 동작 방식을 이해하게 된 좋은 기회였다.
+파악한 바로는, 1초 마다 쓰레드가 생성되어 21초에 한번 22초에 한번 총 2개의 Thread가 생겼다. 이는 기본 Thread 수 만큼 생겼다. 그 후 `executor.setQueueCapacity(10);` 설정한 Queue만큼 작업이 쌓였다. 그 후 `executor.setMaxPoolSize(5);`로 최대 5개의 Thread가 대기 큐만큼 기다렸다가 Max로 설정한 값만큼 Thread가 생성된다. 수용 가능 대기 Queue 크기는 10개 즉, 10초 있다가 Max로 설정한 Queue만큼 Thread가 증가 된다.
+그렇기 때문에 33초에 비동기Thread-3, 비동기Thread-4, 비동기Thread-5가 생기고 최대 Queue 개수까지 도달하고 대기 Queue 사이즈만큼의 공간도 없으면 아래와 같이 에러를 반환하게 된다.
+```java
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@416899ad[Not completed, task = org.springframework.aop.interceptor.AsyncExecutionInterceptor$$Lambda$640/0x000002ab1134c168@5b828449] rejected from java.util.concurrent.ThreadPoolExecutor@780c4fd8[Running, pool size = 5, active threads = 5, queued tasks = 10, completed tasks = 0]
+```
+
+위와 같이 실험 한 이유는 바로 데이터를 수집하면서 직접 마주한 에러이기 때문이다.
+처음에는 굉장히 당황스러웠지만, 이 계기로 스케줄러의 비동기 동작 방식을 이해하게 된 좋은 기회였다.
 
 ---
 
