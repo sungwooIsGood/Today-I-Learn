@@ -232,8 +232,12 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 run1 메서드는 1초마다 실행되도록 설정되어 있지만, Thread.sleep(100000)으로 인해 100초 동안 블록되는 상황을 만들어주었다. 이는 스레드가 작업을 완료하지 못하고 대기하게 만들어 새로운 작업이 쌓게 만들어 `AsyncConfig` 클래스에서 설정한 `executor.setQueueCapacity(10);`
 Queue 수용을 꽉 채웠을 때 에러 반환을 확인하는 목적이다. 
 
-파악한 바로는, 1초 마다 쓰레드가 생성되어 21초에 한번 22초에 한번 총 2개의 Thread가 생겼다. 이는 기본 Thread 수 만큼 생겼다. 그 후 `executor.setQueueCapacity(10);` 설정한 Queue만큼 작업이 쌓였다. 그 후 `executor.setMaxPoolSize(5);`로 최대 5개의 Thread가 대기 큐만큼 기다렸다가 Max로 설정한 값만큼 Thread가 생성된다. 수용 가능 대기 Queue 크기는 10개 즉, 10초 있다가 Max로 설정한 Queue만큼 Thread가 증가 된다.
+파악한 바로는, 1초 마다 쓰레드가 생성되어 21초에 한번 22초에 한번 총 2개의 Thread가 생겼다. 이는 기본 Thread 수 만큼 생겼다. 
+
+그 후 `executor.setQueueCapacity(10);` 설정한 Queue만큼 작업이 쌓였다. 그 후 `executor.setMaxPoolSize(5);`로 최대 5개의 Thread가 대기 큐만큼 기다렸다가 Max로 설정한 값만큼 Thread가 생성된다. 수용 가능 대기 Queue 크기는 10개 즉, 10초 있다가 Max로 설정한 Queue만큼 Thread가 증가 된다.
+
 그렇기 때문에 33초에 비동기Thread-3, 비동기Thread-4, 비동기Thread-5가 생기고 최대 Queue 개수까지 도달하고 대기 Queue 사이즈만큼의 공간도 없으면 아래와 같이 에러를 반환하게 된다.
+
 ```java
 Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@416899ad[Not completed, task = org.springframework.aop.interceptor.AsyncExecutionInterceptor$$Lambda$640/0x000002ab1134c168@5b828449] rejected from java.util.concurrent.ThreadPoolExecutor@780c4fd8[Running, pool size = 5, active threads = 5, queued tasks = 10, completed tasks = 0]
 ```
