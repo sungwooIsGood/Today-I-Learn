@@ -235,9 +235,9 @@ Queue 수용을 꽉 채웠을 때 에러 반환을 확인하는 목적이다.
 
 파악한 바로는, 1초 마다 쓰레드가 생성되어 21초에 한번 22초에 한번 총 2개의 Thread가 생겼다. 이는 기본 Thread 수 만큼 생겼다. 
 
-그 후 `executor.setQueueCapacity(10);` 설정한 Queue만큼 작업이 쌓이고 `executor.setMaxPoolSize(5);`로 최대 5개의 Thread가 대기 큐만큼 기다렸다가 Max로 설정한 값만큼 Thread가 생성된다. 수용 가능 대기 Queue 크기는 10개 즉, 10초 있다가 Max로 설정한 Queue만큼 Thread가 증가 된다.
+그 후 `executor.setQueueCapacity(10);` 설정한 Queue만큼 작업이 쌓이고 `executor.setMaxPoolSize(5);`로 최대 5개의 Thread가 대기 큐만큼 기다렸다가 Max로 설정한 값만큼 Thread가 생성된다. 수용 가능 대기 Queue 크기는 10개 즉, 10초 있다가 Max로 설정한 Pool size만큼 Thread가 증가 된다.
 
-그렇기 때문에 33초에 비동기Thread-3, 비동기Thread-4, 비동기Thread-5가 생기고 최대 Queue 개수까지 도달하고 대기 Queue 사이즈만큼의 공간도 없으면 아래와 같이 에러를 반환하게 된다.
+그렇기 때문에 33초에 비동기Thread-3, 비동기Thread-4, 비동기Thread-5가 생기고 최대로 설정한 Thread 개수만큼 생기고, 대기 Queue 사이즈 만큼의 공간도 없으면 아래와 같이 에러를 반환하게 된다.
 
 ```java
 Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@416899ad[Not completed, task = org.springframework.aop.interceptor.AsyncExecutionInterceptor$$Lambda$640/0x000002ab1134c168@5b828449] rejected from java.util.concurrent.ThreadPoolExecutor@780c4fd8[Running, pool size = 5, active threads = 5, queued tasks = 10, completed tasks = 0]
