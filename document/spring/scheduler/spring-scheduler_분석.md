@@ -228,7 +228,7 @@ class SchedulerService{
 Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@416899ad[Not completed, task = org.springframework.aop.interceptor.AsyncExecutionInterceptor$$Lambda$640/0x000002ab1134c168@5b828449] rejected from java.util.concurrent.ThreadPoolExecutor@780c4fd8[Running, pool size = 5, active threads = 5, queued tasks = 10, completed tasks = 0]
 ```
 
-## 원인 분석
+### 원인 분석
 run1 메서드는 1초마다 실행되도록 설정되어 있지만, Thread.sleep(100000)으로 인해 100초 동안 블록되는 상황을 만들어주었다. 이는 스레드가 작업을 완료하지 못하고 대기하게 만들어 새로운 작업이 쌓게 만들어 `AsyncConfig` 클래스에서 설정한 `executor.setQueueCapacity(10);`
 Queue 수용을 꽉 채웠을 때 에러 반환을 확인하는 목적이다. 
 
