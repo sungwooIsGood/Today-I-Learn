@@ -8,7 +8,7 @@
 
 ### Scheculer
 
-- [Spring Security 초기화 과정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring/scheduler/spring-scheduler_%EB%B6%84%EC%84%9D.md)
+- [spring-scheduler_분석](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring/scheduler/spring-scheduler_%EB%B6%84%EC%84%9D.md)
 
 ### Security
 - [Spring Security 초기화 과정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/Spring%20Security%20%EC%B4%88%EA%B8%B0%ED%99%94%20%EA%B3%BC%EC%A0%95.md)
