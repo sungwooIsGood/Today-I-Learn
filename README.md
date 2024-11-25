@@ -7,8 +7,10 @@
 ## Spring
 
 ### Scheculer
-
 - [spring-scheduler_분석](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring/scheduler/spring-scheduler_%EB%B6%84%EC%84%9D.md)
+
+### Security
+- [사용자 정의 보안 설정](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/spring-security/Spring%20Security%20%EC%B4%88%EA%B8%B0%ED%99%94%20%EA%B3%BC%EC%A0%95.md)
 
 ## JPA
 - [JPA를 활용한 배치 설정을 통해 대량 insert/update 시의 속도개선](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/jpa/%EB%B0%B0%EC%B9%98%20%EC%84%A4%EC%A0%95%EC%9D%84%20%ED%86%B5%ED%95%B4%20%EB%8C%80%EB%9E%B5%20insert%2Cupdate%20%EC%8B%9C%EC%9D%98%20%EC%86%8D%EB%8F%84%EA%B0%9C%EC%84%A0.md)
