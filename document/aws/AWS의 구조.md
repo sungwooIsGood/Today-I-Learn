@@ -1,7 +1,6 @@
 ### AWS의 구조
 
-![스크린샷 2025-01-13 오후 1.40.12.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/e225378b-9dde-48bc-96df-c060d397872e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-01-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.40.12.png)
-
+![스크린샷 2025-01-13 오후 1 40 12](https://github.com/user-attachments/assets/709d4c66-058a-4936-bb29-dc571da63f25)
 ### 리전
 
 - AWS의 서비스가 제공되는 서버의 물리적 위치
@@ -39,20 +38,18 @@
 - 각 계정별로 AZ의 코드와 실제 위치는 다르다.
     - Test1의 AZ-A는 계정 Test2의 AZ-A와 다른 위치(랜덤)
         - 보안 및 몰림 방지
-          ![스크린샷 2025-01-13 오후 1.50.18.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/b17abd84-23e5-4661-8241-08a6726fd222/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-01-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.50.18.png)
-
+          ![스크린샷 2025-01-13 오후 1 50 18](https://github.com/user-attachments/assets/018c012d-5940-4361-b84f-0018e63684ba)
 
 
 ### AWS 인프라 구조
-    
-![스크린샷 2025-01-13 오후 1.51.21.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/d8298b4b-83aa-4a99-bf24-dfeba688e8d0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-01-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.51.21.png)
 
+![스크린샷 2025-01-13 오후 1 51 21](https://github.com/user-attachments/assets/7e30654f-b32d-48a0-8212-57c318eee5da)
 - AWS Cloud 하나의 계정 안에 여러개의 리전이 있으며, 해당 리전 안에는 각각의 가용영역들이 있다.
 - 가용 영역에 걸쳐 여러 서비스들이 동작한다.
 
 ### 엣지 로케이션(Edge Location)
 
-![스크린샷 2025-01-13 오후 1.53.51.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/e15ec965-a76e-4448-ac8f-a9870c148b01/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-01-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.53.51.png)
+![스크린샷 2025-01-13 오후 1 53 51](https://github.com/user-attachments/assets/3a5a8fb3-8d1e-42ed-b907-fc285c62ae76)
 
 - AWS의 CloudFront(CDN)등의 여러 서비스들을 가장 빠른 속도로 제공(캐싱)하기 위한 거점
     - **CDN: 여러 나라에서 한국에 서비스를 이용한다고 했을 때 북미에서 한국까지는 지연 시간, 서비스의 질이 나빠질 수 있음, 그렇기 때문에 북미에 거점을 두고 미리 데이터를 저장해두고 북미 이용자들에게 반환하도록 하는 서비스**
