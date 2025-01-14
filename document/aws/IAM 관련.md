@@ -2,8 +2,7 @@
 
 - 아이콘
 
-  ![스크린샷 2025-01-14 오후 3.16.50.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/efaf8a30-cbd3-4dd2-a51d-9c8bf9b57725/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-01-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.16.50.png)
-
+  ![스크린샷 2025-01-14 오후 3 16 50](https://github.com/user-attachments/assets/538b4132-f0da-495a-95ec-a617d0c08693)
 - AWS Identity and Access Management(IAM)를 사용하면 AWS 서비스와 리소스에 대한 액세스를 안전하게 관리할 수 있다.
 - AWS 사용자 및 그룹을 만들고 관리하며 AWS 리소스에 대한 액세스를 허용 및 거부할 수 있다.
 - **즉, AWS의 보안 및 관리를 담당하는 글로벌 서비스를 담당.**
@@ -18,8 +17,7 @@
 
 ### IAM 구성
 
-![스크린샷 2025-01-14 오후 3.21.22.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/46bb3c4c-01c9-4cdc-8316-fea568c9a230/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-01-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.21.22.png)
-
+![스크린샷 2025-01-14 오후 3 21 22](https://github.com/user-attachments/assets/0f5b44ec-133a-45e8-9cec-eb0ce9552569)
 ### Root 사용자
 
 - 계정을 생성할 때 같이 생성되는 사용자
@@ -66,8 +64,7 @@
     - Condition: 정책이 적용되는 조건(IP주소, 시간, 태그 등)
         - ex)
 
-      ![스크린샷 2025-01-14 오후 3.48.46.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/f413d39a-8fb1-47ee-896c-ecf15ab9a4e4/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-01-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.48.46.png)
-
+      ![스크린샷 2025-01-14 오후 3 48 46](https://github.com/user-attachments/assets/b5bf59b5-40fa-4c25-9525-29df082fdab8)
         - action: s3서비스의 버킷들을 나열
         - effect: 허용
         - resource: arn에 해당하는 리소스에 대해
