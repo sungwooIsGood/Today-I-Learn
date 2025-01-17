@@ -57,6 +57,6 @@
 - [NCP 클라우드 - 서버생성 실습편](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/ncp/ncp%20%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%20-%20%EC%84%9C%EB%B2%84%20%EC%83%9D%EC%84%B1%20%EC%8B%A4%EC%8A%B5.md)
 ## AWS
 - [AWS의 구조](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/aws/AWS%EC%9D%98%20%EA%B5%AC%EC%A1%B0.md)
-- [IAM 기초 관련](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/aws/IAM%20%EA%B4%80%EB%A0%A8.md)
+- [IAM 기초 &사용자 인증 관련](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/aws/IAM%20%EA%B4%80%EB%A0%A8.md)
 ## error
 - [HikariCP Connection timed out](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/error_record/HikariCP%20Connection%20timed%20out.md)
