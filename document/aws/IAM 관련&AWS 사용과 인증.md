@@ -78,13 +78,11 @@
     - 웹 기반의 콘솔에 로그인하여 AWS를 사용
     - 콘솔 액세스 자격 증명을 사용하여 인증
 
-      ![스크린샷 2025-01-14 오후 4.00.05.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/c1473c25-6ec1-4d38-831e-831e89b3f054/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-01-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.00.05.png)
-
+      ![Image](https://github.com/user-attachments/assets/8ba96259-2df6-4635-abdd-86585909a1b1)
 - 프로그래밍 액세스 방식
     - Command Line Interface(CLI): 명령어 기반 AWS 서비스 관리
 
-      ![스크린샷 2025-01-14 오후 4.00.27.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4208ea1-f20c-48bd-b05a-8f485cb16b9b/4d07a7ac-ec5f-47d9-929e-15d09fe96933/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2025-01-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.00.27.png)
-
+      ![Image](https://github.com/user-attachments/assets/be061523-ae70-4106-a8e2-4ad07a9ca38e)
     - Software Development Kit(SDK): 다양한 프로그래밍 언어로 만들어진 AWS 서비스를 관리하는 패키지
         - 각각에 맞는 프로그래밍 언어에 맞는 SDK를 사용해 개발에 활용
     - 프로그램 방식 액세스 자격증명을 사용하여 인증
