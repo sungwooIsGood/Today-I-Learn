@@ -32,6 +32,7 @@
 - [MySQL의 정렬 처리 방식](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/MySQL%EC%9D%98%20%EC%A0%95%EB%A0%AC%20%EC%B2%98%EB%A6%AC%20%EB%B0%A9%EC%8B%9D.md)
 - [MySQL의 GroupBY 처리 방식](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/MySQL%20Group%20BY%20%EC%B2%98%EB%A6%AC%EB%B0%A9%EC%8B%9D.md)
 - [MySQL의 임시 테이블 처리 방식](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/MySQL%EC%9D%98%20%EC%9E%84%EC%8B%9C%20%ED%85%8C%EC%9D%B4%EB%B8%94%20%EC%B2%98%EB%A6%AC.md)
+- [커버링 인덱스](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/%EC%BB%A4%EB%B2%84%EB%A7%81%20%EC%9D%B8%EB%8D%B1%EC%8A%A4.md)
 
 ## Redis
 - [MGET에 대해](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/redis/MGET%EC%97%90%20%EB%8C%80%ED%95%B4.md)
