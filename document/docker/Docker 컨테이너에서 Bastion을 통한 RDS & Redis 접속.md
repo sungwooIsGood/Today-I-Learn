@@ -40,9 +40,9 @@ SSH 터널을 컨테이너에서도 접근 가능하도록 모든 인터페이�
 - **bash**
 
 ```bash
-ssh -i /home/ian/aws_pem/gs-bastion-key.pem -N \
-  -L 0.0.0.0:15432:gs-cms-postgres-db.crm4ywueazx8.ap-northeast-2.rds.amazonaws.com:15432 \
-  -L 0.0.0.0:16379:gs-cms-redis-cluster.gksydc.0001.apn2.cache.amazonaws.com:16379 \
+ssh -i /home/ian/aws_pem/펨키.pem -N \
+  -L 0.0.0.0:15432:url-db.crm4ywueazx8.ap-northeast-2.rds.amazonaws.com:15432 \
+  -L 0.0.0.0:16379:url.gksydc.0001.apn2.cache.amazonaws.com:16379 \
   ec2-user@52.xx.xx.xxx
 
 ```
@@ -51,11 +51,11 @@ ssh -i /home/ian/aws_pem/gs-bastion-key.pem -N \
     - 컨테이너 환경 변수에서 호스트 IP(172.17.0.1) 사용:
 
 ```
-POSTGRES_SERVER= 
+POSTGRES_SERVER=server 네이밍
 POSTGRES_PORT=15432
-POSTGRES_USER=gs_cms_user
+POSTGRES_USER=user 네이밍
 POSTGRES_PASSWORD=비밀번호
-POSTGRES_DB=gs_cms_db
+POSTGRES_DB=db 네이밍
 ```
 
 - **docker-compose.yml**
@@ -64,7 +64,7 @@ POSTGRES_DB=gs_cms_db
 ```yaml
 services:
   web:
-    container_name: cms-api-server
+    container_name: server
     build:
       context: .
       dockerfile: Dockerfile
@@ -85,7 +85,7 @@ services:
 ```yaml
 services:
   web:
-    container_name: cms-api-server
+    container_name: server
     build:
       context: .
       dockerfile: Dockerfile
@@ -97,11 +97,11 @@ services:
 - **.env**
 
 ```bash
-POSTGRES_USER=gs_cms_user
-POSTGRES_PASSWORD=gscmsuser#$#$%
-POSTGRES_SERVER=localhost
+POSTGRES_SERVER=server 네이밍
 POSTGRES_PORT=15432
-POSTGRES_DB=gs_cms_db
+POSTGRES_USER=user 네이밍
+POSTGRES_PASSWORD=비밀번호
+POSTGRES_DB=db 네이밍
 POSTGRES_ASYNC_PREFIX=postgresql+asyncpg://
 ```
 
