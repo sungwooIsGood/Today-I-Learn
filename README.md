@@ -37,6 +37,7 @@
 
 ## FastAPI
 - [Gunicorn과 Uvicorn 간략하게 정리]([https://github.com/sungwooIsGood/Today-I-Learn/tree/main/document/FastAPI](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/FastAPI/Gunicorn%EA%B3%BC%20Uvicorn%20%EC%A0%95%EB%A6%AC.md))
+- [간략하게 Starlette이란?](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/FastAPI/%EA%B0%84%EB%9E%B5%ED%95%98%EA%B2%8C%20Starlette%EC%9D%B4%EB%9E%80%3F.md)
 
 ## Redis
 - [MGET에 대해](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/redis/MGET%EC%97%90%20%EB%8C%80%ED%95%B4.md)
