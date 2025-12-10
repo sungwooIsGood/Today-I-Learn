@@ -36,7 +36,7 @@
 - [커버링 인덱스](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/database/mysql/%EC%BB%A4%EB%B2%84%EB%A7%81%20%EC%9D%B8%EB%8D%B1%EC%8A%A4.md)
 
 ## FastAPI
-- [Gunicorn과 Uvicorn 간략하게 정리](https://github.com/sungwooIsGood/Today-I-Learn/tree/main/document/FastAPI)
+- [Gunicorn과 Uvicorn 간략하게 정리]([https://github.com/sungwooIsGood/Today-I-Learn/tree/main/document/FastAPI](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/FastAPI/Gunicorn%EA%B3%BC%20Uvicorn%20%EC%A0%95%EB%A6%AC.md))
 
 ## Redis
 - [MGET에 대해](https://github.com/sungwooIsGood/Today-I-Learn/blob/main/document/redis/MGET%EC%97%90%20%EB%8C%80%ED%95%B4.md)
