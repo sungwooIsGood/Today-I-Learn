@@ -69,8 +69,8 @@ I/O 완료 시 → 커널이 이벤트 루프에 이벤트 전달
                 ┌──────── Worker 1 (Uvicorn)
                 │        └─ Event Loop
 [Gunicorn] ─────┼──────── Worker 2 (Uvicorn)
-  (Process       │        └─ Event Loop
-  Manager)       └──────── Worker 3 (Uvicorn)
+  (Process      │        └─ Event Loop
+  Manager)      └──────── Worker 3 (Uvicorn)
                          └─ Event Loop
 
 ```
